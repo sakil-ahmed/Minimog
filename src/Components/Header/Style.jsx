@@ -36,6 +36,7 @@ z-index: 999;
     }
     /* Header Middle */
     .middle{
+        transition: all 0.2s ease-in-out;
         ${media.down("lg")}{
             position: fixed;
             top: 0;
