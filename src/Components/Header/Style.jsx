@@ -40,11 +40,12 @@ z-index: 999;
         ${media.down("lg")}{
             position: fixed;
             top: 0;
-            
+            left: 0;
             background-color: ${THEME.colors.mobileMenuBg};
             width: 100%;
             height: 100%;
             z-index: 999;
+            display: flex;
 
             &.open_mobile_menu{
                 left: 0;
@@ -54,23 +55,57 @@ z-index: 999;
             }
 
             .mobile_menu_close{
-                position: fixed;
-                right: 13px;
-                top: 0;
-                height: 40px;
                 width: 40px;
+                height: 40px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
             
             .mobile_menu_inner{
-                width: calc(100% - 55px);
+                width: 340px;
                 background-color: ${THEME.colors.light};
-                padding: 20px 20px 0 20px;
+                padding: 20px 20px 20px 20px;
                 height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
             }
         }
+        .account{
+        ${media.up("lg")}{
+           display:none; 
+        }
+        .account_icon{
+            display: flex;
+            align-items: center;
+        }
+        .account_btn_grp{
+            margin-top: 12px;
+            .btn{
+                display: block;
+                width: 100%;
+                padding: 0 25px;
+                min-height: 45px;
+                border-radius: 5px;
+                line-height: 23px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+            .login{
+                color: ${THEME.colors.light};
+                background-color: ${THEME.colors.primary};
+                margin-bottom: 12px;
+            }
+            .register{
+                border: 1px solid ${THEME.colors.primary};
+                background-color: transparent;
+                color: ${THEME.colors.primary};
+            }
+        }
+    }
         ul>li{
             list-style: none;
             padding: 13px 0;

@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 import { HeaderTop } from './HeaderTop'
 import {AiOutlineMenu} from "react-icons/ai"
 import {AiOutlineClose} from "react-icons/ai"
+import {AiOutlineUser} from "react-icons/ai"
 
 export const Header = () => {
 
@@ -22,10 +23,10 @@ export const Header = () => {
       setIsActive(current => !current);
     };
 
-    const closeMenu = event => {
-      // 👇️ toggle isActive state on click
-      setIsActive(current => !current);
-    };
+    // const closeMenu = event => {
+    //   // 👇️ toggle isActive state on click
+    //   setIsActive(current => !current);
+    // };
     
 
 
@@ -50,10 +51,8 @@ export const Header = () => {
                     </div>
                 </div>
                 {/* Header middle */}
-                <div className={isActive ? "open_mobile_menu middle" : "close_mobile_menu middle"} onClick={closeMenu}>
-                    <div className="mobile_menu_close">
-                    <AiOutlineClose color="#fff" size="13px" fontWeight="900"/>
-                    </div>
+                <div className={isActive ? "open_mobile_menu middle" : "close_mobile_menu middle"} onClick={handleClick}>
+                    
                     <div className="mobile_menu_inner">
                     <nav>
                         <ul>
@@ -66,6 +65,18 @@ export const Header = () => {
                             }
                         </ul>
                     </nav>
+                    <div className="account">
+                        <div className="account_icon">
+                        <AiOutlineUser size="20px"/>My Account
+                        </div>
+                        <div className="account_btn_grp">
+                            <button className="btn login">Log in</button>
+                            <button className="btn register">Register</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div className="mobile_menu_close">
+                    <AiOutlineClose color="#fff" size="13px" fontWeight="900"/>
                     </div>
 
                 </div>

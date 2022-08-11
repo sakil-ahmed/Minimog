@@ -1,6 +1,7 @@
 import styled, { ThemeConsumer } from "styled-components";
 import { THEME } from './Theme';
 import { media } from './Responsive';
+import coundownBgImg from "../Images/h_countdown.jpg"
 
 export const StyledHome = styled.div`
 
@@ -165,4 +166,85 @@ export const StyledHome = styled.div`
    
         }
     }
+    /* Elementor section */
+
+
+
+    /* Feature Catagories section */
+
+    .featured_categories_section{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        ${media.up("md")}{
+            margin-bottom: 80px;
+            margin-top: 80px;
+            }
+        .swiper-button-prev,
+        .swiper-button-next{
+            ${media.down("md")}{
+                display: none;
+            }
+        }
+        .section_title{
+            text-align: center;
+            .title{
+                font-size: 24px;
+                line-height: 1.44;
+                font-weight: 400; 
+                margin-bottom: 30px;               
+                ${media.up("md")}{
+                
+                    font-size: 32px;
+            }
+                ${media.up("lg")}{
+                    font-size: 36px;
+                    margin-bottom: 54px;
+            }
+            }
+        }
+
+    }
+    /* Feature Catagories section */
+
+    /* Coundown Timer section  */
+
+    .coundown_timer_section{
+        background-image: url(${coundownBgImg});
+        background-position: 20% 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+        padding: 40px 0;
+        width: 100%;
+        ${media.up("md")}{
+            background-position: 30% 50%;
+                }
+        ${media.up("lg")}{
+            background-position: 50% 50%;
+            padding: 110px 0;
+                }
+        .row{
+            .left_column{
+                ${media.up("md")}{
+                    display: none;
+                }
+            }
+            
+            .right_column{
+                margin-bottom: 0;
+                max-width: 50%;
+                margin: 0 auto;
+                ${media.up("md")}{
+                    margin-left: 50%;
+                }
+                ${media.up("lg")}{
+                    
+                }
+                
+                
+            }
+        }
+    }
+
+    /* Coundown Timer section  */
 `

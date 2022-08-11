@@ -6,14 +6,21 @@ import hoverimg1 from "../Images/Product_card_img/product_fashion_hover_01.jpg";
 import elementor_img from "./../Images/h_cta.jpg"
 import { Link } from 'react-router-dom';
 import { StyledHome } from '../Styles/StyledHome';
+import { TimerCoundown } from '../Components/TimerCoundown';
+import { CatagoriesCard } from '../Components/CatagoriesCard/CatagoriesCard';
+
+
 
 
 
 
 export const Home = () => {
+
+
   return (
+    <StyledHome>
     <div className="container">
-      <StyledHome>
+      
         <div className="product_card_section">
           <div className="section_title">
             <h2 className="title">This week’s highlights</h2>
@@ -37,9 +44,11 @@ export const Home = () => {
             </div>
 
         </div>
-         
+        </div>
          {/* Elementor section */}
+         <div className="container">
           <div className="elementor_section">
+          
             <div className="elementor_left_column">
               <img className="elementor_left_img" src={elementor_img} alt="" />
             </div>
@@ -48,9 +57,42 @@ export const Home = () => {
               <p className="heading_description">We believe in crafting pieces where sustainability and style go hand in hand. Made from materials like recycled cashmere and sust</p>
               <Link to="/" className="elementor_section_btn">Shop Collection</Link>
             </div>
+            
+          </div>
           </div>
          {/* Elementor section */}
+
+         {/* Featured Categories Section */}
+         <div className="featured_categories_section">
+          <div className="container">
+            <div className="row">
+              <div className="section_title">
+                <h2 className="title">Featured Categories</h2>
+              </div>
+              <div className="slider">
+                <CatagoriesCard/>
+              </div>
+            </div>
+          </div>
+         </div>
+
+         {/* Featured Categories Section */}
+         {/* Coundown Timer section  */}
+        
+           <div className="coundown_timer_section"> 
+          <div className="container">
+            <div className="row">
+              <div className="left_column">
+
+              </div>
+              <div className="right_column">
+                <TimerCoundown/>
+              </div>
+            </div>
+          </div>
+         </div> 
+         {/* Coundown Timer section */}
          </StyledHome>
-    </div>
+    
   )
 }

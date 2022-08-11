@@ -43,6 +43,9 @@ export const StyledCard = styled.div`
             
         }
         .card-icon{
+            ${media.down("sm")}{
+                display: none;
+            }
                 position: absolute;
                 top: 20px;
                 right: -55px;
@@ -96,6 +99,9 @@ export const StyledCard = styled.div`
                 
             }
             .cta{
+                ${media.down("sm")}{
+                display: none;
+            }
                 position: absolute;
                 bottom: -45px;
                 left: 20px;
