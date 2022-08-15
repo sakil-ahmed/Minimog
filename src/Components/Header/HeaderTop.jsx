@@ -30,10 +30,10 @@ padding: 10px 0;
 
 `
 
-export const HeaderTop = ({text , type}) => {
-  return (
-    <StyledHeaderTop className={type}>
-        <span>{text}</span>
-    </StyledHeaderTop>
-  )
+export const HeaderTop = ({ text, type }) => {
+    return (
+        <StyledHeaderTop className={type}>
+            <span>{text}</span>
+        </StyledHeaderTop>
+    )
 }

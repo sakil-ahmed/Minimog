@@ -11,22 +11,21 @@ import { Home } from './pages/Home';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <>
-      <GlobalStyles />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<App />}>
-              <Route index element={<Home />}/>
-              <Route path="shop" element={<Shop />}/>
-              <Route path="products" element={<Products />}/>
-              <Route path="blog" element={<Blog />}/>
-              <Route path="pages" element={<Pages />}/>
+  <>
+    <GlobalStyles />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="products" element={<Products />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="pages" element={<Pages />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
 
-            </Route>
-          </Routes>
-        </BrowserRouter>
-    
-    </>
-  
-    )
+  </>
+
+)
 

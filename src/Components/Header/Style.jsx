@@ -5,13 +5,20 @@ import { media } from './../../Styles/Responsive';
 
 export const StyledHeader = styled.header`
 /* box-shadow: 4px 4px 8px rgba(0,0,0,.3); */
+box-shadow: 0 8px 20px 0 rgba(0,0,0,.1);
 z-index: 999;
+
     .wrapper{
         display: flex;
         align-items: center;
         justify-content: space-between;
         align-content: center;
         flex-wrap: wrap;
+        min-height: 50px;
+        ${media.up("md")}{
+            min-height: 70px;
+            }
+
     }
     /* Header left */
     .left{
@@ -27,7 +34,13 @@ z-index: 999;
         }
 
         .logo{
-            width: 145px;
+            width: 100px;
+            ${media.up("sm")}{
+                width: 120px; 
+            }
+            ${media.up("lg")}{
+                width: 145px; 
+            }
             img{
                 width: 100%;
                 cursor: pointer;
@@ -37,6 +50,11 @@ z-index: 999;
     /* Header Middle */
     .middle{
         transition: all 0.2s ease-in-out;
+        ${media.up("lg")}{
+            .mobile_menu_close{
+                display: none;
+            }
+        }
         ${media.down("lg")}{
             position: fixed;
             top: 0;
@@ -60,6 +78,7 @@ z-index: 999;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+               
             }
             
             .mobile_menu_inner{

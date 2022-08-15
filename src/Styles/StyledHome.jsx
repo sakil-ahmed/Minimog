@@ -1,16 +1,18 @@
-import styled, { ThemeConsumer } from "styled-components";
+import styled from "styled-components";
 import { THEME } from './Theme';
 import { media } from './Responsive';
-import coundownBgImg from "../Images/h_countdown.jpg"
+import coundownBgImg from "../../public/Images/h_countdown.jpg"
 
 export const StyledHome = styled.div`
 
 /* product card section */
     .product_card_section{
-        margin-top: 100px;
-
+        margin-top: 30px;
+        ${media.up("md")}{
+            margin-top: 70px;
+        }
         ${media.up("lg")}{
-
+            margin-top: 100px;
         }
         .section_title{
             text-align: center;
@@ -59,7 +61,6 @@ export const StyledHome = styled.div`
                 ${media.up("md")}{
                     width: fit-content;
                 }
-               
                 &:hover{
                     background-color: ${THEME.colors.primary};
                     color: ${THEME.colors.light};
@@ -68,11 +69,7 @@ export const StyledHome = styled.div`
             }
         }
     }
-
-
 /* product card section */
-
-
     /* Elementor section */
     .elementor_section{
         margin-top: 40px;
@@ -86,7 +83,6 @@ export const StyledHome = styled.div`
         ${media.up("md")}{
             flex-wrap: nowrap;
         }
-        
         .elementor_left_column{
             margin-bottom: 20px;
             overflow: hidden;
@@ -109,7 +105,6 @@ export const StyledHome = styled.div`
             
         }
         .elementor_right_column{
-            
             ${media.up("md")}{
                 padding: 0 15px 0 55px;
                 max-width: 40%;
@@ -118,8 +113,7 @@ export const StyledHome = styled.div`
                 max-width: 40%;
                 padding: 0 15px 0 55px;
             }
-            .elementor_heading_title{
-                
+            .elementor_heading_title{ 
                 text-transform: capitalize;
                 font-size: 24px;
                 line-height: 1.43;
@@ -138,8 +132,6 @@ export const StyledHome = styled.div`
                 ${media.up("lg")}{
                     margin: 18px 0 38px 0;
                 }
-
-
             }
             .elementor_section_btn{
                 position: relative;
@@ -159,19 +151,12 @@ export const StyledHome = styled.div`
                     width: 0;
                     right: 0;
                     
-                }
-               
-              
+                }  
             }
-   
         }
     }
     /* Elementor section */
-
-
-
     /* Feature Catagories section */
-
     .featured_categories_section{
         margin-top: 40px;
         margin-bottom: 40px;
@@ -193,21 +178,42 @@ export const StyledHome = styled.div`
                 font-weight: 400; 
                 margin-bottom: 30px;               
                 ${media.up("md")}{
-                
                     font-size: 32px;
             }
                 ${media.up("lg")}{
                     font-size: 36px;
                     margin-bottom: 54px;
-            }
+                }
             }
         }
-
+        .slider{
+            .swiper-button-prev,
+            .swiper-button-next{
+                width: 45px;
+                height: 45px;
+                font-size: 14px;
+                opacity: 0;
+                transition: all .75s cubic-bezier(0,0,.2,1);
+                border: 1px solid ${THEME.colors.lighten};
+                border-radius: 50%;
+                overflow: hidden;
+                &:hover{
+                    background-color: ${THEME.colors.primary};
+                    color: ${THEME.colors.light};
+                    border-color: ${THEME.colors.primary};
+                    box-shadow: 0 0 0 0.2rem ${THEME.colors.primary};
+                }
+            }
+            &:hover{
+                .swiper-button-prev,
+                .swiper-button-next{
+                    opacity: 1;
+                }
+            }
+        }
     }
     /* Feature Catagories section */
-
     /* Coundown Timer section  */
-
     .coundown_timer_section{
         background-image: url(${coundownBgImg});
         background-position: 20% 0;
@@ -229,7 +235,6 @@ export const StyledHome = styled.div`
                     display: none;
                 }
             }
-            
             .right_column{
                 margin-bottom: 0;
                 max-width: 50%;
@@ -239,9 +244,7 @@ export const StyledHome = styled.div`
                 }
                 ${media.up("lg")}{
                     
-                }
-                
-                
+                }  
             }
         }
     }

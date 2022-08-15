@@ -8,6 +8,8 @@ export const StyledCatagoriesCard = styled.div`
             overflow: hidden;
             img{
                 transition: all .75s cubic-bezier(0,0,.2,1);
+                width: 100%;
+                object-fit: cover;
             }
             &:hover{
                 img{
