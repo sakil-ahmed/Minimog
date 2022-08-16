@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { StyledHome } from '../Styles/StyledHome';
 import { CatagoriesCard } from './../Components/CatagoriesCard/CatagoriesCard';
 import { TimerCoundown } from '../Components/Timer/TimerCoundown';
+import { HeroSlider } from '../Components/HeroSlider/HeroSlider';
 
 
 
@@ -18,6 +19,10 @@ export const Home = () => {
 
   return (
     <StyledHome>
+    <div className="hero_section">
+      <HeroSlider/>
+    </div>
+
       <div className="container">
         <div className="product_card_section">
           <div className="section_title">
@@ -86,6 +91,9 @@ export const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="section_out_content">
+        <TimerCoundown />
       </div>
       {/* Coundown Timer section */}
     </StyledHome>

@@ -71,6 +71,9 @@ text-align: center;
             font-size:16px;
             font-weight: 500;
             transition: all 0.3s ease-in-out;
+            ${media.down("sm")}{
+                width: 100%;
+            }
             &:hover{
                 box-shadow: 0 0 0 0.2rem ${THEME.colors.primary};
             }

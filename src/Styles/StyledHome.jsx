@@ -222,6 +222,7 @@ export const StyledHome = styled.div`
         transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
         padding: 40px 0;
         width: 100%;
+        min-height: 270px;
         ${media.up("md")}{
             background-position: 30% 50%;
                 }
@@ -242,10 +243,17 @@ export const StyledHome = styled.div`
                 ${media.up("md")}{
                     margin-left: 50%;
                 }
-                ${media.up("lg")}{
-                    
+                ${media.down("sm")}{
+                    display: none;
                 }  
             }
+        }
+    }
+    .section_out_content{
+        margin-top: 30px;
+        padding: 0 15px;
+        ${media.up("sm")}{
+            display: none;
         }
     }
 
