@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { THEME } from './../../Styles/Theme';
+import { media } from './../../Styles/Responsive';
 
 export const StyledHero = styled.div`
     .swiper-button-prev,
@@ -10,16 +11,20 @@ export const StyledHero = styled.div`
         position: relative;
     }
         .swiper-pagination{
-            position: absolute;
-            top: 50%;
-            left: 95%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            width: 30px;
-            height: fit-content ;
-            align-items: center;
-            gap: 30px;
+                top: 50%;
+                left: 95%;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                width: 30px;
+                height: fit-content ;
+                align-items: center;
+                gap: 30px;
+                ${media.down("sm")}{
+                    right: 50px;
+                    left: 0;
+                }
+                
             .swiper-pagination-bullet{
             background-color: ${THEME.colors.primary};
             width: 10px;

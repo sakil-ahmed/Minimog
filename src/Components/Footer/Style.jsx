@@ -23,14 +23,13 @@ export const StyledFooter = styled.div`
                 line-height: 30px;
                 color: ${THEME.colors.secondary};
             }
-            .contact,
-            .collection{
-                
-            }
             .footer_top_content{
                 padding: 0 15px;
                 margin-bottom: 30px;
-                max-width: 18%;
+                min-width: 18%;
+                ${media.down("sm")}{
+                    margin-bottom: 0;
+                    }
                 ${media.down("sm")}{
                     max-width: 100%;
                 }
@@ -40,10 +39,27 @@ export const StyledFooter = styled.div`
                     line-height: 1.43;
                     padding: 0 1em 20px 0;
                     margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    svg{
+                        ${media.up("sm")}{
+                            display: none;
+                        }
+                    }
                     
                 }
                 .company_item{
                     width: 100%;
+                    transition: all .3s cubic-bezier(0,0,.2,1);
+                    
+                }
+                .hide_item{
+                    ${media.down("sm")}{
+                        display: none;
+
+                    }
                 }
             }
             .space{
@@ -67,6 +83,12 @@ export const StyledFooter = styled.div`
                     font-weight: 400;
                     margin-bottom: 11px;
                 }
+
+            .gift_card_container{
+                ${media.down("sm")}{
+                    margin-top: 20px;
+                }
+            }
             
             .gift_card{
                 margin: -10px 0 43px;

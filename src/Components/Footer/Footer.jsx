@@ -1,22 +1,45 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom';
 import { FaPinterestP } from 'react-icons/fa';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
+import { FiChevronDown } from 'react-icons/fi';
 import payment from "../../../public/Images/payment.png"
 import { StyledFooter } from './Style';
 
 export const Footer = () => {
+
+  const [company, setCompany] = useState(false);
+  const [information, setInformation] = useState(false);
+  const [contact, setContact] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const companyClick = event => {
+    setCompany(current => !current);
+  };
+
+  const informationClick = event => {
+    setInformation(current => !current);
+  };
+
+  const contactClick = event => {
+    setContact(current => !current);
+  };
+
+  const handleClick = event => {
+      setIsActive(current => !current);
+  };
+
   return (
     <StyledFooter>
       <div className="container">
         <div className="row">
           <div className="footer_top">
               {/* Company */}
-              <div className="footer_top_content company">
-                <h4 className="company_text heading_text">Company</h4>
-                <div className="company_item">
+              <div className="footer_top_content company" >
+                <h4 className="company_text heading_text" onClick={companyClick}>Company <FiChevronDown/></h4>
+                <div className={company ? "company_item" : "hide_item"}>
                   <p className="text">About Us</p>
                   <p className="text">Contact</p>
                   <p className="text">Shipping & Return</p>
@@ -26,8 +49,8 @@ export const Footer = () => {
               {/* Company */}
               {/* information */}
               <div className="footer_top_content information">
-                <h4 className="company_text heading_text">Information</h4>
-                <div className="company_item">
+                <h4 className="company_text heading_text" onClick={informationClick}>Information <FiChevronDown/></h4>
+                <div className={information ? "company_item" : "hide_item"}>
                   <p className="text">My Account</p>
                   <p className="text">Login</p>
                   <p className="text">My Cart</p>
@@ -38,8 +61,8 @@ export const Footer = () => {
               {/* information */}
               {/* contact */}
               <div className="footer_top_content contact">
-                <h4 className="company_text heading_text">Contact</h4>
-                <div className="company_item">
+                <h4 className="company_text heading_text" onClick={contactClick}>Contact <FiChevronDown/></h4>
+                <div className={contact ? "company_item" : "hide_item"}>
                   <p className="text">Customer Service</p>
                   <p className="text">Store Locator</p>
                   <p className="text">Wholesale</p>
@@ -49,8 +72,8 @@ export const Footer = () => {
               {/* contact */}
               {/* collection */}
               <div className="footer_top_content collection">
-                <h4 className="company_text heading_text">Collection</h4>
-                <div className="company_item">
+                <h4 className="company_text heading_text" onClick={handleClick}>Collection <FiChevronDown/></h4>
+                <div className={isActive ? "company_item" : "hide_item" }>
                   <p className="text">Women</p>
                   <p className="text">Man</p>
                   <p className="text">Bestsellers</p>
