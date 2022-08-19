@@ -9,7 +9,8 @@ export const THEME = {
         headertoptext:"#977f00",
         lighten:"#ababab",
         mobileMenuBg:"rgba(0,0,0,0.53)",
-        gray:"#828282"
+        gray:"#828282",
+        formBorder: "#d2d2d2"
     },
    fonts: {
         body: "'Jost', sans-serif",

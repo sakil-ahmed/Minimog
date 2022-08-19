@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { THEME } from './../../Styles/Theme';
 import { media } from './../../Styles/Responsive';
+import cursorImg from "./../../../public/Images/light-close.png"
 
 
 export const StyledHeader = styled.header`
@@ -64,6 +65,7 @@ z-index: 999;
             height: 100%;
             z-index: 999;
             display: flex;
+            cursor: url(${cursorImg}) 16 16 pointer;
 
             &.open_mobile_menu{
                 left: 0;
@@ -89,6 +91,7 @@ z-index: 999;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                cursor: default;
                 
             }
         }
@@ -152,7 +155,6 @@ z-index: 999;
                 &::after{
                     content: "";
                     position: absolute;
-                    
                     right: 0;
                     bottom: 0;
                     width: 0;
@@ -234,6 +236,148 @@ z-index: 999;
                 
             }
         }
+    }
+
+
+    /* Popup Login  form */
+    .popup_login_container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        cursor: url(${cursorImg}) 16 16 ,pointer;
+        z-index: 9999999;
+        color: ${THEME.colors.secondary};
+        background: ${THEME.colors.mobileMenuBg};
+        visibility: hidden;
+        opacity: 0;
+        transition: all .25s cubic-bezier(.645,.045,.355,1);
+    }
+    .open_login{
+        visibility: visible;
+        opacity: 1;
+    }
+     /* Popup Login  form */
+    
+/* Search menu */
+.popup_search_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: url(${cursorImg}) 16 16 ,pointer;
+    z-index: 9999999;
+    color: ${THEME.colors.secondary};
+    background: ${THEME.colors.mobileMenuBg};
+    visibility: hidden;
+    opacity: 0;
+    transition: all .25s cubic-bezier(.645,.045,.355,1);
+}
+.opended{
+    visibility: visible;
+    opacity: 1;
+}
+/* Search menu */
+
+
+
+    /* Cart pop up */
+
+    .popup_fly_cart{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999999;
+        visibility: hidden;
+        opacity: 0;
+        background: rgba(0,0,0,.5);
+        transition: all .25s cubic-bezier(.645,.045,.355,1);
+        cursor: url(${cursorImg}) 16 16,pointer;
+        .popup_cart_inner{
+            position: relative;
+            height: 100%;
+            max-width: 90%;
+            text-align: left;
+            cursor: default;
+            float: right;
+            width: 450px;
+            background: ${THEME.colors.light};
+            box-shadow: 0 0 10px rgb(0 0 0 / 5%);
+            padding: 0 20px;
+            .close_cart_btn{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                font-size: 24px;
+                line-height: 1;
+                height: 40px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1;
+                cursor: pointer;
+            }
+            .fly_cart_header{
+                position: relative;
+                padding: 26px 0 28px;
+                background: ${THEME.colors.light};
+                .fly_cart_title{
+                    font-size: 24px;
+                    font-weight: 500;
+                    margin: 0;
+                }
+            }
+
+            .fly_cart_body{
+                .empty_cart_icon{
+                    width: 240px;
+                    max-width: 80%;
+                    margin: 0 auto 30px;
+                }
+                .empty_cart_heading{
+                    font-size: 18px;
+                    margin: 0 0 10px;
+                    font-weight: 500;
+                    text-align: center;
+                }
+                .empty_cart_text{
+                    text-align: center;
+                }
+                .return_to_shop{
+                    margin-top: 20px;
+                    text-align: center;
+                    a{
+                        padding: 10px 35px;
+                        border-radius: 5px;
+                        line-height: 43px;
+                        outline: none;
+                        border: none;
+                        color: ${THEME.colors.light};
+                        background-color: ${THEME.colors.primary};
+                        font-size: 16px;
+                        font-weight: 500;
+                        transition: all .3s ease-in-out;
+                        &:hover{
+                            box-shadow: 0 0 0 0.2rem ${THEME.colors.primary};
+                            color: ${THEME.colors.light};
+                            background-color: ${THEME.colors.primary};
+                        }
+                    }
+                }
+                
+            }
+        }
+    
+    }
+    .opended{
+        visibility: visible;
+        opacity: 1;
     }
         
 `
