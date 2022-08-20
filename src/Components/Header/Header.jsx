@@ -17,6 +17,7 @@ import icon4 from "../../../public/Images/Icon/cart.svg"
 import cartEmpty from "./../../../public/Images/empty-cart.png"
 import { SearchMenu } from './SearchMenu/SearchMenu';
 import { Login } from './Login/Login';
+import { Register } from './Register/Register';
 
 
 
@@ -28,6 +29,7 @@ export const Header = () => {
     const [isActiveCart, setIsActiveCart] = useState(false);
     const [isActiveSearch, setIsActiveSearch] = useState(false);
     const [isActiveLogin, setIsActiveLogin] = useState(false);
+    const [isActiveRegister, setIsActiveRegister] = useState(false);
 
     // Mobile Menu
     const handleClick = event => {
@@ -49,6 +51,11 @@ export const Header = () => {
     const handleClickLogin = event => {
         
         setIsActiveLogin(current => !current);
+    };
+    // Register
+    const handleClickRegister = event => {
+        
+        setIsActiveRegister(current => !current);
     };
 
     return (
@@ -86,7 +93,7 @@ export const Header = () => {
                                 </div>
                                 <div className="account_btn_grp">
                                     <button className="btn login" onClick={ handleClickLogin}>Log in</button>
-                                    <button className="btn register">Register</button>
+                                    <button className="btn register" onClick={handleClickRegister}>Register</button>
                                 </div>
                             </div>
                         </div>
@@ -131,9 +138,14 @@ export const Header = () => {
                 {/* Popup Login  form */}
 
                 <div className= {isActiveLogin ? "popup_login_container open_login": "popup_login_container"}>
-                    <Login handleClickLogin={handleClickLogin}/>
+                    <Login handleClickLogin={handleClickLogin} handleClickRegister={handleClickRegister} />
                 </div>
                 {/* Popup Login  form */}
+                {/* Popup Register form */}
+                <div className= {isActiveRegister ? "popup_register_container open_register" : "popup_register_container"}>
+                    <Register handleClickRegister={handleClickRegister} handleClickLogin={handleClickLogin}/>
+                </div>
+                {/* Popup Register form */}
 
                 {/* "popup_search_menu" */}
                     <div className={isActiveSearch ? "popup_search_menu opended" : "popup_search_menu"}>

@@ -166,9 +166,7 @@ export const StyledHome = styled.div`
             }
         .swiper-button-prev,
         .swiper-button-next{
-            ${media.down("md")}{
-                display: none;
-            }
+            display: none;
         }
         .section_title{
             text-align: center;
@@ -183,31 +181,6 @@ export const StyledHome = styled.div`
                 ${media.up("lg")}{
                     font-size: 36px;
                     margin-bottom: 54px;
-                }
-            }
-        }
-        .slider{
-            .swiper-button-prev,
-            .swiper-button-next{
-                width: 45px;
-                height: 45px;
-                font-size: 14px;
-                opacity: 0;
-                transition: all .75s cubic-bezier(0,0,.2,1);
-                border: 1px solid ${THEME.colors.lighten};
-                border-radius: 50%;
-                overflow: hidden;
-                &:hover{
-                    background-color: ${THEME.colors.primary};
-                    color: ${THEME.colors.light};
-                    border-color: ${THEME.colors.primary};
-                    box-shadow: 0 0 0 0.2rem ${THEME.colors.primary};
-                }
-            }
-            &:hover{
-                .swiper-button-prev,
-                .swiper-button-next{
-                    opacity: 1;
                 }
             }
         }

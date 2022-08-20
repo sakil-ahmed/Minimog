@@ -260,6 +260,28 @@ z-index: 999;
         opacity: 1;
     }
      /* Popup Login  form */
+
+     /* Popup Register Form */
+     .popup_register_container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        cursor: url(${cursorImg}) 16 16 ,pointer;
+        z-index: 9999999;
+        color: ${THEME.colors.secondary};
+        background: ${THEME.colors.mobileMenuBg};
+        visibility: hidden;
+        opacity: 0;
+        transition: all .25s cubic-bezier(.645,.045,.355,1);
+     }
+     .open_register{
+        visibility: visible;
+        opacity: 1;
+    }
+     /* Popup Register Form */
     
 /* Search menu */
 .popup_search_menu{

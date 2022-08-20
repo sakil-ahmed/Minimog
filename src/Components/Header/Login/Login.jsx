@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { CgClose } from "react-icons/cg";
 import { StyledLogin } from './StyledLogin'
 
-export const Login = ({handleClickLogin}) => {
+export const Login = ({handleClickLogin , handleClickRegister}) => {
 
 
     const [ user , setUser] = useState({name:"" , password:""})
@@ -27,7 +27,7 @@ export const Login = ({handleClickLogin}) => {
         <div className="login_header">
             <h3 className="login_title">Sign In</h3>
             <p className="login_description">Don't have an account yet?
-            <Link to="/"> Sign up </Link>
+            <Link to="/" onClick={()=>{handleClickRegister(); handleClickLogin();}}> Sign up </Link>
             for free
             </p>
         </div>
