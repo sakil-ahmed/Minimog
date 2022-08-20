@@ -23,6 +23,7 @@ export const Card = (props) => {
                     : ""}
 
                 <div className="thumbnail">
+                    <Link to={title}>
                     {/* Card images */}
                     <div className="card-main-img">
                         <img src={mainImg} alt="" />
@@ -31,7 +32,7 @@ export const Card = (props) => {
                     <div className="card-hover-img">
                         <img src={hoverImg} alt="" />
                     </div>
-
+                    </Link>
                     {/* Card icon */}
                     <div className="card-icon">
                         <div className="icon">
@@ -49,7 +50,7 @@ export const Card = (props) => {
                         </div>
                     </div>
                     <div className="cta">
-                        <Link to="/">{btntext}</Link>
+                        <Link to={title}>{btntext}</Link>
                     </div>
                 </div>
             </div>
@@ -57,10 +58,10 @@ export const Card = (props) => {
             <div className="card-bottom">
 
                 <h4 className="subtitle">
-                    <Link to="/">{subtitle}</Link>
+                    <Link to={title}>{subtitle}</Link>
                 </h4>
                 <h3 className="title">
-                    <Link to="/">{title}</Link>
+                    <Link to={title}>{title}</Link>
                 </h3>
                 {disPrice ?
                     <del>

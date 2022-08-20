@@ -33,15 +33,17 @@ export const Home = () => {
               CARD.map((props, i) => {
                 const { mainImg, hoverImg, subtitle, title, btntext, disPrice, price, saleRate } = props
                 return (
-                  <Card key={i}
-                    mainImg={mainImg}
-                    hoverImg={hoverImg}
-                    subtitle={subtitle}
-                    title={title}
-                    btntext={btntext}
-                    disPrice={disPrice}
-                    price={price}
-                    saleRate={saleRate} />
+                  
+                    <Card
+                      key={i}
+                      mainImg={mainImg}
+                      hoverImg={hoverImg}
+                      subtitle={subtitle}
+                      title={title}
+                      btntext={btntext}
+                      disPrice={disPrice}
+                      price={price}
+                      saleRate={saleRate} />
                 )
 
               })

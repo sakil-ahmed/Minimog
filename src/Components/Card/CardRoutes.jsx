@@ -9,7 +9,8 @@ export const CARD = [
         btntext:"Add to cart",
         disPrice: "$39.00",
         price: "$29.00",
-        saleRate:"-26%", 
+        saleRate:"-26%",
+        
     },
     // 2
     {
@@ -21,6 +22,7 @@ export const CARD = [
         disPrice: "",
         price: "$17.00",
         saleRate:"",
+        
     },
     // 3
     {
@@ -32,6 +34,7 @@ export const CARD = [
         disPrice: "$16.00",
         price: "$13.00",
         saleRate:"-19%",
+        
     },
     // 4
     {
@@ -43,6 +46,7 @@ export const CARD = [
         disPrice: "$17.00",
         price: "$14.00",
         saleRate:"-18%",
+        
     },
     // 5
     {
@@ -54,6 +58,7 @@ export const CARD = [
         disPrice: "",
         price: "$15.00",
         saleRate:"",
+        
     },
     // 6
     {
@@ -65,6 +70,7 @@ export const CARD = [
         disPrice: "",
         price: "$9.00",
         saleRate:"",
+        
     },
     // 7
     {
@@ -76,6 +82,7 @@ export const CARD = [
         disPrice: "",
         price: "$17.00",
         saleRate:"",
+        
     },
     // 8
     {
@@ -87,5 +94,6 @@ export const CARD = [
         disPrice: "",
         price: "$12.00",
         saleRate:"",
+        
     },
 ]

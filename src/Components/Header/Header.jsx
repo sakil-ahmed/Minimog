@@ -104,30 +104,30 @@ export const Header = () => {
                     {/* Header right */}
                     <div className="right">
                         <div className="header-icon tooltip display_none" onClick={handleClickLogin}>
-                            <Link to={"/"}>
-                                <img src={icon1} alt="" />
-                            </Link>
+                            
+                                <img src={icon1} alt="User Icon" />
+                          
                             <span className="tooltiptext">Log in</span>
                         </div>
                         <div className="header-icon tooltip" onClick={handleClickSearch}>
-                            <Link to={"/"}>
-                                <img src={icon2} alt="" />
-                            </Link>
+                            
+                                <img src={icon2} alt="Search Icon " />
+                            
                             <span className="tooltiptext">Search</span>
                         </div>
                         <div className="header-icon tooltip display_none">
-                            <Link to={"/"}>
-                                <img src={icon3} alt="" />
+                            <Link to="">
+                                <img src={icon3} alt="Wishlist Icon" />
                                 <span className="icon-badge">0</span>
                             </Link>
                             <span className="tooltiptext">Wishlist</span>
 
                         </div>
                         <div className="header-icon tooltip" onClick={handleClickCart}>
-                            <Link to={"/"}>
-                                <img src={icon4} alt="" />
+                            
+                                <img src={icon4} alt="Cart Icon" />
                                 <span className="icon-badge">0</span>
-                            </Link>
+                            
                             <span className="tooltiptext">Cart</span>
                         </div>
                     </div>
