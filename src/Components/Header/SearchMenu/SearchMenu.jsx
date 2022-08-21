@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 export const SearchMenu = (props) => {
 
-    const {cart , search} = props
+    const {cart , search , login} = props
     return (
         <StyledSearchMenu>
             <div className="search_close_icon" onClick={search}>
@@ -32,7 +32,7 @@ export const SearchMenu = (props) => {
                     </div>
                     <div className="search_bar_icons">
 
-                        <div className="header-icon tooltip">
+                        <div className="header-icon tooltip" onClick={login}>
                             <Link to={"/"}>
                                 <img src={icon1} alt="" />
                             </Link>

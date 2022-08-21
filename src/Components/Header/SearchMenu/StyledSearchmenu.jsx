@@ -96,6 +96,7 @@ export const StyledSearchMenu = styled.div`
                 border-radius: 5px;
                 font-size: 22px;
                 background: transparent;
+                cursor: pointer;
                 svg{
                     position: absolute;
                     top: 50%;

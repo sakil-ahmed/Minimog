@@ -10,6 +10,7 @@ export const CARD = [
         disPrice: "$39.00",
         price: "$29.00",
         saleRate:"-26%",
+        images:"images/Product_card_img/product_fashion_hover_01.jpg"
         
     },
     // 2
@@ -22,7 +23,7 @@ export const CARD = [
         disPrice: "",
         price: "$17.00",
         saleRate:"",
-        
+        images:"images/Product_card_img/product_fashion_hover_01.jpg"
     },
     // 3
     {
@@ -34,7 +35,7 @@ export const CARD = [
         disPrice: "$16.00",
         price: "$13.00",
         saleRate:"-19%",
-        
+        images:"images/Product_card_img/product_fashion_hover_01.jpg"
     },
     // 4
     {
@@ -46,7 +47,7 @@ export const CARD = [
         disPrice: "$17.00",
         price: "$14.00",
         saleRate:"-18%",
-        
+        images:"images/Product_card_img/product_fashion_hover_01.jpg"
     },
     // 5
     {
@@ -58,7 +59,7 @@ export const CARD = [
         disPrice: "",
         price: "$15.00",
         saleRate:"",
-        
+        images:"images/Product_card_img/product_fashion_hover_01.jpg"
     },
     // 6
     {
@@ -70,7 +71,7 @@ export const CARD = [
         disPrice: "",
         price: "$9.00",
         saleRate:"",
-        
+        images:"images/Product_card_img/product_fashion_hover_01.jpg"
     },
     // 7
     {
@@ -82,7 +83,7 @@ export const CARD = [
         disPrice: "",
         price: "$17.00",
         saleRate:"",
-        
+        images:"images/Product_card_img/product_fashion_hover_01.jpg"
     },
     // 8
     {
@@ -94,6 +95,6 @@ export const CARD = [
         disPrice: "",
         price: "$12.00",
         saleRate:"",
-        
+        images:"images/Product_card_img/product_fashion_hover_01.jpg"
     },
 ]

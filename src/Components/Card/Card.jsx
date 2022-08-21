@@ -35,10 +35,12 @@ export const Card = (props) => {
                     </Link>
                     {/* Card icon */}
                     <div className="card-icon">
-                        <div className="icon">
-                            <AiOutlineStar />
-                            <span className="tooltiptext Wishlist">Add to Wishlist</span>
-                        </div>
+                        <Link to="wishlist">
+                            <div className="icon">
+                                <AiOutlineStar />
+                                <span className="tooltiptext Wishlist">Add to Wishlist</span>
+                            </div>
+                        </Link>
 
                         <div className="icon">
                             <CgArrowsExchangeAlt />

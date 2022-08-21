@@ -116,7 +116,7 @@ export const Header = () => {
                             <span className="tooltiptext">Search</span>
                         </div>
                         <div className="header-icon tooltip display_none">
-                            <Link to="">
+                            <Link to="wishlist">
                                 <img src={icon3} alt="Wishlist Icon" />
                                 <span className="icon-badge">0</span>
                             </Link>
@@ -149,7 +149,7 @@ export const Header = () => {
 
                 {/* "popup_search_menu" */}
                     <div className={isActiveSearch ? "popup_search_menu opended" : "popup_search_menu"}>
-                        <SearchMenu cart={handleClickCart} search={handleClickSearch}/>
+                        <SearchMenu cart={handleClickCart} search={handleClickSearch} login={handleClickLogin}/>
                     </div>
 
                 {/* Search Menu */}
