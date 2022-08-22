@@ -9,15 +9,17 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import { CardDetails } from '../Components/Card/CardDetails/CardDetails';
 
 export const SelectOption = () => {
-  const { title } = useParams();
+  const { to } = useParams();
   const [data, setData] = useState("")
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(() => {
-    const data = CARD.filter((data) => data.title === title);
+    const data = CARD.filter((data) => data.to === to);
     setData(data);
+    console.log(data);
 
   }, []);
 
@@ -26,6 +28,7 @@ export const SelectOption = () => {
   return (
     <div className="container">
       <StyledSelOpt>
+        <div className="left_column">
         <div className="slider">
           <div className="slider_left">
             <Swiper
@@ -43,9 +46,7 @@ export const SelectOption = () => {
               <SwiperSlide>
                 <img src={data[0]?.hoverImg} alt="" />
               </SwiperSlide>
-              <SwiperSlide>
-                <img src={data[0]?.images} alt="" />
-              </SwiperSlide>
+             
             </Swiper>
           </div>
           <div className="slider_right">
@@ -66,12 +67,13 @@ export const SelectOption = () => {
                 <SwiperSlide>
                   <img src={data[0]?.hoverImg} alt="" />
                 </SwiperSlide>
-                <SwiperSlide>
-                <img src={data[0]?.images} alt="" />
-              </SwiperSlide>
               </div>
             </Swiper>
           </div>
+        </div>
+        </div>
+        <div className="right_column">
+          <CardDetails heading={data[0]?.title} price={data[0]?.price} disprice={data[0]?.disPrice}/>
         </div>
       </StyledSelOpt>
     </div>

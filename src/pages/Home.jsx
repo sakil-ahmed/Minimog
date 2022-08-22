@@ -31,11 +31,12 @@ export const Home = () => {
           <div className="card_container">
             {
               CARD.map((props, i) => {
-                const { mainImg, hoverImg, subtitle, title, btntext, disPrice, price, saleRate } = props
+                const { mainImg, hoverImg, subtitle, title, btntext, disPrice, price, saleRate , to } = props
                 return (
                   
                     <Card
                       key={i}
+                      to={to}
                       mainImg={mainImg}
                       hoverImg={hoverImg}
                       subtitle={subtitle}

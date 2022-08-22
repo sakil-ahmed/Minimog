@@ -6,7 +6,7 @@ import cursorImg from "./../../../public/Images/light-close.png"
 
 export const StyledHeader = styled.header`
 /* box-shadow: 4px 4px 8px rgba(0,0,0,.3); */
-box-shadow: 0 8px 20px 0 rgba(0,0,0,.1);
+/* box-shadow: 0 8px 20px 0 rgba(0,0,0,.1); */
 z-index: 999;
 
     .wrapper{

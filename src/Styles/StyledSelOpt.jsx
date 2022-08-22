@@ -3,16 +3,26 @@ import styled from "styled-components";
 
 export const StyledSelOpt = styled.div`
 margin-top: 50px;
-
-.slider{
-   
 display: flex;
-flex-direction: row-reverse;
-justify-content: flex-end;
-
-
+.left_column,
+.right_column{
+    max-width: 50%;
+    width: 100%;
+    padding: 0 .9375rem;
+}
+    .slider{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     .slider_left{
-        width: 30%;
+        width: 81%;
+        .swiper-slide{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
         
     }
     .slider_right{
@@ -34,15 +44,7 @@ justify-content: flex-end;
                     transform: scale3d(.86,.86,.86);
                 }
             }
-        }
-      
-       .swiperslider{
-        
-       }
-    
-        
+        }   
     }
-    
-
 }
 `

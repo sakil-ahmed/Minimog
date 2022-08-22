@@ -10,7 +10,7 @@ import { StyledCard } from './Style'
 
 export const Card = (props) => {
 
-    const { mainImg, hoverImg, subtitle, title, btntext, disPrice, price, saleRate } = props
+    const { mainImg, hoverImg, subtitle, title, btntext, disPrice, price, saleRate, to } = props
 
     return (
         <StyledCard>
@@ -23,7 +23,7 @@ export const Card = (props) => {
                     : ""}
 
                 <div className="thumbnail">
-                    <Link to={title}>
+                    <Link to={to}>
                     {/* Card images */}
                     <div className="card-main-img">
                         <img src={mainImg} alt="" />
@@ -52,7 +52,7 @@ export const Card = (props) => {
                         </div>
                     </div>
                     <div className="cta">
-                        <Link to={title}>{btntext}</Link>
+                        <Link to={to}>{btntext}</Link>
                     </div>
                 </div>
             </div>
@@ -60,10 +60,10 @@ export const Card = (props) => {
             <div className="card-bottom">
 
                 <h4 className="subtitle">
-                    <Link to={title}>{subtitle}</Link>
+                    <Link to={to}>{subtitle}</Link>
                 </h4>
                 <h3 className="title">
-                    <Link to={title}>{title}</Link>
+                    <Link to={to}>{title}</Link>
                 </h3>
                 {disPrice ?
                     <del>

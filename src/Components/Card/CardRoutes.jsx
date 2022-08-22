@@ -10,7 +10,8 @@ export const CARD = [
         disPrice: "$39.00",
         price: "$29.00",
         saleRate:"-26%",
-        images:"images/Product_card_img/product_fashion_hover_01.jpg"
+        to:"wool-blend-jacket",
+       
         
     },
     // 2
@@ -23,7 +24,8 @@ export const CARD = [
         disPrice: "",
         price: "$17.00",
         saleRate:"",
-        images:"images/Product_card_img/product_fashion_hover_01.jpg"
+        to:"wedge-heeled-espadrilles",
+       
     },
     // 3
     {
@@ -35,7 +37,8 @@ export const CARD = [
         disPrice: "$16.00",
         price: "$13.00",
         saleRate:"-19%",
-        images:"images/Product_card_img/product_fashion_hover_01.jpg"
+        to:"v-neck-sweater",
+       
     },
     // 4
     {
@@ -47,7 +50,8 @@ export const CARD = [
         disPrice: "$17.00",
         price: "$14.00",
         saleRate:"-18%",
-        images:"images/Product_card_img/product_fashion_hover_01.jpg"
+        to:"trainers-shoes",
+       
     },
     // 5
     {
@@ -59,7 +63,8 @@ export const CARD = [
         disPrice: "",
         price: "$15.00",
         saleRate:"",
-        images:"images/Product_card_img/product_fashion_hover_01.jpg"
+        to:"tinted-sunglasses",
+       
     },
     // 6
     {
@@ -71,7 +76,8 @@ export const CARD = [
         disPrice: "",
         price: "$9.00",
         saleRate:"",
-        images:"images/Product_card_img/product_fashion_hover_01.jpg"
+        to:"sweatshirt-short",
+       
     },
     // 7
     {
@@ -83,7 +89,8 @@ export const CARD = [
         disPrice: "",
         price: "$17.00",
         saleRate:"",
-        images:"images/Product_card_img/product_fashion_hover_01.jpg"
+        to:"stripe-cotton-shirt",
+        
     },
     // 8
     {
@@ -95,6 +102,7 @@ export const CARD = [
         disPrice: "",
         price: "$12.00",
         saleRate:"",
-        images:"images/Product_card_img/product_fashion_hover_01.jpg"
+        to:"straw-shopeer-bag",
+       
     },
 ]
