@@ -116,4 +116,67 @@ export const StyledCardDetails = styled.div`
             }
         }
     }
+    .variations{
+        .text_color,
+        .text_size{
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            text-transform: capitalize;
+            color: ${THEME.colors.primary};
+            display: block;
+        }
+        .colors{
+            max-width: 100%;
+            padding:10px 10px 10px 0;
+
+
+            .color_1,
+            .color_2{
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                border-radius: 50%;
+                margin-top: 7px;
+                box-shadow: 0 0 0 1px rgb(0 0 0 / 10%);
+                cursor: pointer;
+                transition: all .3s cubic-bezier(0,0,.2,1);
+                background-color: ${THEME.colors.primary};
+                &:hover{
+                    box-shadow: 0 0 0 1px ${THEME.colors.primary}, 0 8px 20px rgb(0 0 0 / 20%), inset 0 0 0 4px ${THEME.colors.light};
+                    transform: scale(1.1);
+                }
+            }
+            .color_1{
+                margin-right: 10px;
+            }
+            
+        }
+        .size{
+            .size_btn{
+                margin-top: 11px;
+                .btn{
+                background: ${THEME.colors.light};
+                font-size: 18px;
+                min-height: 45px;
+                width: 45px;
+                line-height: 45px;
+                /* padding:10px 12px 10px 13px; */
+                border-radius: 5px;
+                overflow: hidden;
+                border: 1px solid ${THEME.colors.borderColor};
+                text-align: center;
+                margin: 10px 10px 0 0;
+                cursor: pointer;
+                transition: all .3s cubic-bezier(0,0,.2,1);
+                display: inline-block;
+                &:hover{
+                    border-color: ${THEME.colors.primary};
+                }
+            }
+
+            }
+            
+        }
+    }
 `

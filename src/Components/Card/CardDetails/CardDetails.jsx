@@ -26,9 +26,36 @@ export const CardDetails = ({heading , price , disprice}) => {
                 </div>
         </div>
         <div className="variations">
-            <div className="colors"></div>
+            <div className="colors">
+                <span className="text_color">Color :</span>
+                <div className="color_1">
+
+                </div>
+                <div className="color_2">
+
+                </div>
+            </div>
             <div className="size">
-                
+                    <span className="text_size">Size :</span>
+                    <div className="size_btn">
+                        <div className="btn">
+                        <span>35</span>
+                        </div>
+                        <div className="btn">
+                            <span>35</span>
+                        </div>
+                        <div className="btn">
+                            <span>37</span>
+                        </div>
+                        <div className="btn">
+                            <span>38</span>
+                        </div>
+                        <div className="btn">
+                            <span>39</span>
+                        </div>
+                        
+                        
+                    </div>
             </div>
         </div>
         

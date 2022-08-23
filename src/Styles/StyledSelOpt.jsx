@@ -1,21 +1,36 @@
 import styled from "styled-components";
+import { media } from './Responsive';
 
 
 export const StyledSelOpt = styled.div`
 margin-top: 50px;
-display: flex;
+
+${media.up("md")}{
+    display: flex;
+    }
+
 .left_column,
 .right_column{
-    max-width: 50%;
     width: 100%;
-    padding: 0 .9375rem;
+    ${media.up("md")}{
+        max-width: 50%;
+        width: 100%;
+        padding: 0 .9375rem;
+    }
+    
 }
     .slider{
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     .slider_left{
-        width: 81%;
+        width: 100%;
+        margin-bottom: 40px;
+        ${media.up("lg")}{
+            width: 81%;
+            margin-bottom: 0;
+        }
+        
         .swiper-slide{
             img{
                 width: 100%;
@@ -29,6 +44,9 @@ display: flex;
         width: 90px;
         margin-right: 20px;
         overflow: hidden;
+        ${media.down("md")}{
+        display: none;
+    }
 
         .swiper-slide{
             margin-bottom: 10px;

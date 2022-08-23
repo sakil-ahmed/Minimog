@@ -10,7 +10,8 @@ export const THEME = {
         lighten:"#ababab",
         mobileMenuBg:"rgba(0,0,0,0.53)",
         gray:"#828282",
-        formBorder: "#d2d2d2"
+        formBorder: "#d2d2d2",
+        borderColor:"#e5e5e5"
     },
    fonts: {
         body: "'Jost', sans-serif",
