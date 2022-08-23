@@ -1,9 +1,20 @@
 import styled from "styled-components";
 import { media } from './Responsive';
+import {BsArrowLeftShort} from "react-icons/bs"
 
 
 export const StyledSelOpt = styled.div`
 margin-top: 50px;
+.swiper-button-prev{
+    &::after{
+        content: "" !important;
+    }
+}
+.swiper-button-next{
+    &::after{
+        content: "" !important;
+    }
+}
 
 ${media.up("md")}{
     display: flex;
