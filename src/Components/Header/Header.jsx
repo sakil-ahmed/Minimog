@@ -18,6 +18,7 @@ import cartEmpty from "./../../../public/Images/empty-cart.png"
 import { SearchMenu } from './SearchMenu/SearchMenu';
 import { Login } from './Login/Login';
 import { Register } from './Register/Register';
+import { ForgetPass } from './Login/ForgetPass';
 
 
 
@@ -30,6 +31,7 @@ export const Header = () => {
     const [isActiveSearch, setIsActiveSearch] = useState(false);
     const [isActiveLogin, setIsActiveLogin] = useState(false);
     const [isActiveRegister, setIsActiveRegister] = useState(false);
+    const [isActiveReset, setIsActiveReset] = useState(false);
 
     // Mobile Menu
     const handleClick = event => setIsActive(!isActive);
@@ -39,6 +41,8 @@ export const Header = () => {
     const handleClickSearch = event => setIsActiveSearch(!isActiveSearch);
     // login
     const handleClickLogin = event => setIsActiveLogin(!isActiveLogin);
+    // Reset Password
+    const handleClickReset = event => setIsActiveReset(!isActiveReset);
     // Register
     const handleClickRegister = event => setIsActiveRegister(!isActiveRegister);
    
@@ -123,9 +127,14 @@ export const Header = () => {
                 {/* Popup Login  form */}
 
                 <div className= {isActiveLogin ? "popup_login_container open_login": "popup_login_container"}>
-                    <Login handleClickLogin={handleClickLogin} handleClickRegister={handleClickRegister} />
+                    <Login handleClickReset={handleClickReset} handleClickLogin={handleClickLogin} handleClickRegister={handleClickRegister} />
                 </div>
                 {/* Popup Login  form */}
+                {/* Forget Password */}
+                <div className={isActiveReset ? "password_reset open_popup" : "password_reset"}>
+                    <ForgetPass handleClickReset={handleClickReset} handleClickLogin={handleClickLogin}/>
+                </div>
+                {/* Forget Password */}
                 {/* Popup Register form */}
                 <div className= {isActiveRegister ? "popup_register_container open_register" : "popup_register_container"}>
                     <Register handleClickRegister={handleClickRegister} handleClickLogin={handleClickLogin}/>

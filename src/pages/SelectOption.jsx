@@ -19,7 +19,7 @@ export const SelectOption = () => {
   useEffect(() => {
     const data = CARD.filter((data) => data.to === to);
     setData(data);
-  }, []);
+  });
 
 
 

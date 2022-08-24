@@ -3,12 +3,19 @@ import { THEME } from './../../Styles/Theme';
 import { media } from './../../Styles/Responsive';
 
 export const StyledHero = styled.div`
+
+
     .swiper-button-prev,
     .swiper-button-next{
         display: none;
     }
     .swiper-wrapper{
         position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            
+        }
     }
         .swiper-pagination{
                 top: 50%;
@@ -21,8 +28,7 @@ export const StyledHero = styled.div`
                 align-items: center;
                 gap: 30px;
                 ${media.down("sm")}{
-                    right: 50px;
-                    left: 0;
+                    display: none;
                 }
                 
             .swiper-pagination-bullet{

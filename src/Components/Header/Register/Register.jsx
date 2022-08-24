@@ -5,15 +5,13 @@ import { Link } from 'react-router-dom';
 
 export const Register = ({handleClickRegister ,handleClickLogin}) => {
 
-    const [ user , setUser] = useState({name:"" , username:"" , email:"" , password:""})
+    const [ user , setUser] = useState({name:"" , username:"" , email:"" , password:""});
     const form = useRef(null);
 
-    const handleChange = (e) => {
-        setUser({...user, [e.target.name] : e.target.value})
-      }
+    const handleChange = (e) => setUser({...user, [e.target.name] : e.target.value});
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         form.current.reset();
         console.log(user);
 
@@ -37,16 +35,16 @@ export const Register = ({handleClickRegister ,handleClickLogin}) => {
         <div className="register_body">
             <form action="" ref={form} onSubmit={handleSubmit}>
                 <div className="form_group">
-                    <input type="text" id="name" className="form-control form-input" name="name" placeholder="Your Name" onChange={handleChange}/>
+                    <input type="text" id="name" className="form-control form-input" name="name" placeholder="Your Name" onChange={handleChange} required/>
                 </div>
                 <div className="form_group">
-                    <input type="text" id="reg_username" className="form-control form-input" name="username" placeholder="Username" onChange={handleChange}/>
+                    <input type="text" id="reg_username" className="form-control form-input" name="username" placeholder="Username" onChange={handleChange} required/>
                 </div>
                 <div className="form_group">
-                    <input type="email" id="reg_email" className="form-control form-input" name="email" onChange={handleChange} placeholder="Your Email"/>
+                    <input type="email" id="reg_email" className="form-control form-input" name="email" onChange={handleChange} placeholder="Your Email" required/>
                 </div>
                 <div className="form_group">
-                    <input type="password" id="reg_password" className="form-control form-input" onChange={handleChange} name="password" placeholder="Password"/>
+                    <input type="password" id="reg_password" className="form-control form-input" onChange={handleChange} name="password" placeholder="Password" required/>
                 </div>
                 <div className="form_group">
                     <label className="form-label form-label-checkbox" htmlFor="ip_rememberme">

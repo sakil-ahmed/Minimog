@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { THEME } from './../../../Styles/Theme';
 
-export const StyledLogin = styled.div`
+export const StyledForgetPass = styled.div`
     background-color: ${THEME.colors.light};
     cursor: default;
     max-width: calc(100vw - 50px) ;
@@ -12,7 +12,7 @@ export const StyledLogin = styled.div`
     transform: translate(-50% , -50%);
     padding: 2rem;
     border-radius: 5px;
-    .close_login{
+    .close_reset{
         position: absolute;
         top: -20px;
         right: -20px;
@@ -34,15 +34,17 @@ export const StyledLogin = styled.div`
             color: ${THEME.colors.light};
         }
     }
-    .login_header{
+    .reset_header{
         text-align: center;
         margin: 0 0 32px;
-        .login_title{
+        .title{
             font-size: 36px;
             line-height: 1.44;
+            text-align: center;
             font-weight: 400;
+            
         }
-        .login_description{
+        .description{
             font-size: 15px;
             line-height: 26px;
             margin: 10px 0 0;
@@ -59,6 +61,9 @@ export const StyledLogin = styled.div`
                     background-color: ${THEME.colors.primary};
                     transition: 0.3s;
                 }
+                &:hover{
+                    opacity: .5;
+                }
                 &:hover::after{
                     width: 100%;
                     left: 0;
@@ -68,34 +73,28 @@ export const StyledLogin = styled.div`
                 }
             }
         }
-        
-       
     }
-    .login_body{
+    .lost-password-form{
         .form_group{
-            margin-bottom: 15px;
-            .form-input{
+            margin: 0 0 15px;
+            input{
                 width: 100%;
                 padding: 3px 18px;
                 min-height: 45px;
                 border-radius: 5px;
                 border: 0;
                 outline: 0;
-                border: 1px solid ${THEME.colors.formBorder};
+                border: 1px solid #d2d2d2;
                 font-size: 15px;
                 font-weight: 400;
-                &:focus{
-                    border: 1px solid ${THEME.colors.primary};
-                }
             }
-            .form_submit{
+            .submit{
                 padding: 0 35px;
                 height: 45px;
                 line-height: 43px;
                 outline: none;
                 border: none;
                 width: 100%;
-                margin: 19px 0 18px;
                 background: ${THEME.colors.primary};
                 color: ${THEME.colors.light};
                 cursor: pointer;
@@ -105,53 +104,8 @@ export const StyledLogin = styled.div`
                 transition: all .2s ease-in-out;
                 &:hover{
                     box-shadow: 0 0 0 0.2rem ${THEME.colors.primary};
-                }
-            }
-           
-
-        }
-        
-        .checkbox_group{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            .checkbox{
-                input[type=checkbox]{
-                    margin: 0 8px 0 2px;
-                    cursor: pointer;
-                    height: 14px;
-                    width: 14px;
-                    background-color: ${THEME.colors.primary};
-                }
-            }
-        }
-        .forget_password{
-            a{
-                position: relative;
-                transition: all .3s ease-in-out;
-                &::after{
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    width: 0;
-                    height: 1px;
-                    background-color: ${THEME.colors.primary};
-                    transition: 0.3s;
-                }
-                &:hover{
-                    opacity: .5;
-                }
-                &:hover::after{
-                    width: 100%;
-                    left: 0;
-                    opacity: .5;
-                    
-                    
-                }
+                } 
             }
         }
     }
-
 `

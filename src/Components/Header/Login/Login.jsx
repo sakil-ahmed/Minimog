@@ -3,17 +3,15 @@ import { Link } from 'react-router-dom'
 import { CgClose } from "react-icons/cg";
 import { StyledLogin } from './StyledLogin'
 
-export const Login = ({handleClickLogin , handleClickRegister}) => {
+export const Login = ({handleClickReset , handleClickLogin , handleClickRegister}) => {
 
 
     const [ user , setUser] = useState({name:"" , password:""})
     const form = useRef(null);
 
-    const handleChange = (e) => {
-        setUser({...user, [e.target.name] : e.target.value})
-      }
+    const handleChange = e => setUser({...user, [e.target.name] : e.target.value});
 
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
         e.preventDefault()
         form.current.reset();
         console.log(user);
@@ -34,10 +32,10 @@ export const Login = ({handleClickLogin , handleClickRegister}) => {
         <div className="login_body">
             <form ref={form} method="post" onSubmit={handleSubmit}>
                 <div className="form_group">
-                    <input type="text" id="name" onChange={handleChange} className="form-control form-input" name="name" placeholder="Your username or email"/>
+                    <input type="text" id="name" onChange={handleChange} className="form-control form-input" name="name" placeholder="Your username or email" required/>
                 </div>
                 <div className="form_group">
-                <input type="password" id="password" onChange={handleChange} className="form-control form-input" name="password" placeholder="Password"/>
+                <input type="password" id="password" onChange={handleChange} className="form-control form-input" name="password" placeholder="Password" required/>
                 </div>
                 <div className="form_group checkbox_group">
                     <div className="checkbox">
@@ -47,7 +45,7 @@ export const Login = ({handleClickLogin , handleClickRegister}) => {
                         </label>
                     </div>
                     <div className="forget_password">
-                        <Link to="/">Forgot your password?</Link>
+                        <Link to="/" onClick={()=>{handleClickReset();handleClickLogin();}}>Forgot your password?</Link>
                     </div>
                 </div>
                 <div className="form_group">
