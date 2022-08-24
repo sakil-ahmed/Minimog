@@ -19,12 +19,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/:to" element={<SelectOption/>} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="products" element={<Products />} />
+          <Route path=":to" element={<SelectOption/>} />
           <Route path="wishlist" element={<WishList/>} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/pages" element={<Pages />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="pages" element={<Pages />} />
         </Route>
       </Routes>
     </BrowserRouter>
