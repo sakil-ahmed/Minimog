@@ -32,31 +32,16 @@ export const Header = () => {
     const [isActiveRegister, setIsActiveRegister] = useState(false);
 
     // Mobile Menu
-    const handleClick = event => {
-       
-        setIsActive(current => !current);
-    };
-
+    const handleClick = event => setIsActive(!isActive);
     // Shoping Cart
-    const handleClickCart = event => {
-        
-        setIsActiveCart(current => !current);
-    };
+    const handleClickCart = event => setIsActiveCart(!isActiveCart);
     // Search menu
-    const handleClickSearch = event => {
-        
-        setIsActiveSearch(current => !current);
-    };
+    const handleClickSearch = event => setIsActiveSearch(!isActiveSearch);
     // login
-    const handleClickLogin = event => {
-        
-        setIsActiveLogin(current => !current);
-    };
+    const handleClickLogin = event => setIsActiveLogin(!isActiveLogin);
     // Register
-    const handleClickRegister = event => {
-        
-        setIsActiveRegister(current => !current);
-    };
+    const handleClickRegister = event => setIsActiveRegister(!isActiveRegister);
+   
 
     return (
         <StyledHeader>

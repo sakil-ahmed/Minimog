@@ -8,15 +8,7 @@ import { CatagoriesCard } from './../Components/CatagoriesCard/CatagoriesCard';
 import { TimerCoundown } from '../Components/Timer/TimerCoundown';
 import { HeroSlider } from '../Components/HeroSlider/HeroSlider';
 
-
-
-
-
-
-
 export const Home = () => {
-
-
   return (
     <StyledHome>
     <div className="hero_section">

@@ -14,13 +14,8 @@ import img from "./../../../../public/Images/product-trust-badge.png"
 export const CardDetails = ({heading , price , disprice}) => {
 const [ number , setNumber] = useState(1);
 
-const increase = () => {
-    setNumber( number + 1)
-};
-const decrease = () => {
-    setNumber( number - 1)
-};
-
+const increase = () => setNumber( number + 1)
+const decrease = () => setNumber( number - 1)
 
   return (
     <StyledCardDetails>

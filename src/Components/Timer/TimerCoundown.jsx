@@ -13,7 +13,7 @@ export const TimerCoundown = () => {
   let interval;
 
   const startTimer = () => {
-    const coundownDate = new Date("Sep 14 , 2022").getTime();
+    const coundownDate = new Date("Sep 20 , 2022").getTime();
 
 
     interval = setInterval(() => {
@@ -38,9 +38,7 @@ export const TimerCoundown = () => {
     });
   };
 
-  useEffect(() => {
-    startTimer();
-  });
+  useEffect(() => startTimer());
 
 
   return (
