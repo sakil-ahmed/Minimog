@@ -17,9 +17,9 @@ export const SelectOption = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(() => {
-    const data = CARD.filter((data) => data.to === to);
-    setData(data);
-  });
+    const getData = CARD.filter((data , i) => data.to === to);
+    setData(getData);
+  },[]);
 
 
 
@@ -56,16 +56,12 @@ export const SelectOption = () => {
               navigation={false}
               className="mySwiper"
             >
-              <div className="swiperslider">
                 <SwiperSlide>
                   <img src={data[0]?.mainImg} alt="" />
                 </SwiperSlide>
-              </div>
-              <div className="swiperslider">
                 <SwiperSlide>
                   <img src={data[0]?.hoverImg} alt="" />
                 </SwiperSlide>
-              </div>
             </Swiper>
           </div>
         </div>
