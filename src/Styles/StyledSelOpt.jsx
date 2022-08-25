@@ -18,15 +18,22 @@ margin-top: 50px;
 
 ${media.up("md")}{
     display: flex;
+}
+.right_column{
+    ${media.up("lg")}{
+        margin-left: 40px;
     }
-
+}
 .left_column,
 .right_column{
+    padding: 0 .9375rem;
     width: 100%;
+    margin-right: 20px;
     ${media.up("md")}{
         max-width: 50%;
         width: 100%;
         padding: 0 .9375rem;
+        margin-right: 0;
     }
     
 }
@@ -34,6 +41,7 @@ ${media.up("md")}{
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+    flex-wrap: nowrap;
     .slider_left{
         width: 100%;
         margin-bottom: 40px;
