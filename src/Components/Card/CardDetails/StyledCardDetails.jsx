@@ -224,6 +224,7 @@ export const StyledCardDetails = styled.div`
                     border: none;
                     outline: none;
                     background-color: #f1f1f1;
+                    color: ${THEME.colors.primary};
 
                 }
             }

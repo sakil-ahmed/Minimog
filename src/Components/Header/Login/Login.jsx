@@ -19,6 +19,7 @@ export const Login = ({handleClickReset , handleClickLogin , handleClickRegister
     }
   return (
     <StyledLogin>
+        
         <div className="close_login" onClick={handleClickLogin}>
         <CgClose />
         </div>
@@ -53,6 +54,7 @@ export const Login = ({handleClickReset , handleClickLogin , handleClickRegister
                 </div>
             </form>
         </div>
+        
     </StyledLogin>
   )
 }

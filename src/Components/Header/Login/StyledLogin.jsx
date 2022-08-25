@@ -5,6 +5,7 @@ export const StyledLogin = styled.div`
     background-color: ${THEME.colors.light};
     cursor: default;
     max-width: calc(100vw - 50px) ;
+    max-height: calc(100% - 50px) ;
     width: 500px;
     position: fixed;
     top: 50%;
@@ -12,8 +13,9 @@ export const StyledLogin = styled.div`
     transform: translate(-50% , -50%);
     padding: 2rem;
     border-radius: 5px;
+    
     .close_login{
-        position: absolute;
+        position: fixed;
         top: -20px;
         right: -20px;
         cursor: pointer;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useRef , useEffect} from 'react'
 import { StyledHeader } from './Style'
 import { ROUTES } from './../../routes';
 import { CustomNavLink } from './CustomNavLink';
@@ -32,6 +32,7 @@ export const Header = () => {
     const [isActiveLogin, setIsActiveLogin] = useState(false);
     const [isActiveRegister, setIsActiveRegister] = useState(false);
     const [isActiveReset, setIsActiveReset] = useState(false);
+    const ref = useRef(null)
 
     // Mobile Menu
     const handleClick = event => setIsActive(!isActive);
@@ -46,7 +47,53 @@ export const Header = () => {
     // Register
     const handleClickRegister = event => setIsActiveRegister(!isActiveRegister);
    
+// close all menu
 
+    useEffect(() =>{
+        if(isActive === true){
+        document.body.style.overflow="hidden"
+        document.body.style.marginRight="17px"
+        
+
+        }else if(isActiveCart === true){
+            document.body.style.overflow="hidden"
+            document.body.style.marginRight="17px"
+        }
+        else if(isActiveSearch === true){
+            document.body.style.overflow="hidden"
+            document.body.style.marginRight="17px"
+        }
+        else if(isActiveLogin === true){
+            document.body.style.overflow="hidden"
+            document.body.style.marginRight="17px"
+            
+        }
+        else if(isActiveRegister === true){
+            document.body.style.overflow="hidden"
+            document.body.style.marginRight="17px"
+        }
+        else if(isActiveReset === true){
+            document.body.style.overflow="hidden"
+            document.body.style.marginRight="17px"
+        }
+        else{
+            document.body.style.overflow="auto"
+            document.body.style.marginRight="0"
+        }
+        const mobileDevice = (mobile) => {
+            if(mobile.matches){
+                document.body.style.marginRight="0"
+            }
+        }
+        let mobile = window.matchMedia("(max-width: 768px)")
+        mobileDevice(mobile);
+        mobile.addEventListener("" ,mobileDevice)
+
+    },[isActiveLogin , isActive , isActiveCart, isActiveSearch ,isActiveRegister ,isActiveReset]);
+
+    
+
+   
     return (
         <StyledHeader>
             <HeaderTop text="
@@ -126,7 +173,7 @@ export const Header = () => {
 
                 {/* Popup Login  form */}
 
-                <div className= {isActiveLogin ? "popup_login_container open_login": "popup_login_container"}>
+                <div ref={ref} className= {isActiveLogin ? "popup_login_container open_login": "popup_login_container"}>
                     <Login handleClickReset={handleClickReset} handleClickLogin={handleClickLogin} handleClickRegister={handleClickRegister} />
                 </div>
                 {/* Popup Login  form */}

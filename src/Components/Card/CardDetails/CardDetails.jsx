@@ -52,19 +52,19 @@ const decrease = () => setNumber( number - 1)
                     <span className="text_size">Size :</span>
                     <div className="size_btn">
                         <div className="btn">
-                        <span>35</span>
+                        <span title='XS'>XS</span>
                         </div>
                         <div className="btn">
-                            <span>35</span>
+                            <span>S</span>
                         </div>
                         <div className="btn">
-                            <span>37</span>
+                            <span>M</span>
                         </div>
                         <div className="btn">
-                            <span>38</span>
+                            <span>L</span>
                         </div>
                         <div className="btn">
-                            <span>39</span>
+                            <span>XL</span>
                         </div>
                         
                         
@@ -77,7 +77,7 @@ const decrease = () => setNumber( number - 1)
                 
                 <div className="quantity">
                     <button type="button" className="" onClick={decrease} disabled={number === 1 ? true: false}><AiOutlineMinus/></button>
-                    <input type="text" disabled placeholder={number} className="input-text qty text"/>
+                    <input type="text" readOnly value={number} className="input-text qty text"/>
                     <button type="button" className="" onClick={increase}><AiOutlinePlus/></button>
                 </div>
                 <div className="btn_top">
