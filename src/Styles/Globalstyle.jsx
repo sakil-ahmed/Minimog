@@ -1,10 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { THEME } from './Theme';
-
-
-
-
-
+import { THEME } from "./Theme";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -82,11 +77,4 @@ a{
 
 }
 
-`
-
-
-
-
-
-
-
+`;

@@ -1,29 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import { StyledTimer } from './StyledTimer';
-
+import React, { useEffect, useState } from "react";
+import { StyledTimer } from "./StyledTimer";
 
 export const TimerCoundown = () => {
-
   /* The above code is a countdown timer. */
-  const [day, setDay] = useState("00")
-  const [hour, setHour] = useState("00")
-  const [minute, setMinute] = useState("00")
-  const [second, setSecond] = useState("00")
+  const [day, setDay] = useState("00");
+  const [hour, setHour] = useState("00");
+  const [minute, setMinute] = useState("00");
+  const [second, setSecond] = useState("00");
 
   let interval;
 
   const startTimer = () => {
     const coundownDate = new Date("Sep 20 , 2022").getTime();
 
-
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = coundownDate - now;
 
       const days = Math.floor(distance / (24 * 60 * 60 * 1000));
-      const hours = Math.floor(distance % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
-      const minutes = Math.floor(distance % (60 * 60 * 1000) / (60 * 1000));
-      const seconds = Math.floor(distance % (60 * 1000) / (1000));
+      const hours = Math.floor(
+        (distance % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000)
+      );
+      const minutes = Math.floor((distance % (60 * 60 * 1000)) / (60 * 1000));
+      const seconds = Math.floor((distance % (60 * 1000)) / 1000);
 
       if (distance < 0) {
         // Stop Timer
@@ -39,7 +38,6 @@ export const TimerCoundown = () => {
   };
 
   useEffect(() => startTimer());
-
 
   return (
     <StyledTimer>
@@ -69,8 +67,5 @@ export const TimerCoundown = () => {
         <button className="btn">Get Only $20</button>
       </div>
     </StyledTimer>
-
-  )
-
-}
-
+  );
+};
