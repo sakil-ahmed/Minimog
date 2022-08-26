@@ -77,6 +77,27 @@ export const StyledRegisterForm = styled.div`
     .register_body{
         .form_group{
             margin-bottom: 15px;
+            position: relative;
+            .show_hide_btn{
+                position: absolute;
+                top: 0;
+                right: 0;
+                min-width: 45px;
+                height: 45px;
+                line-height: 45px;
+                padding: 0;
+                border: 0;
+                border-radius: 5px;
+                font-size: 22px;
+                background: transparent;
+                cursor: pointer;
+                svg{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
             .form-input{
                 width: 100%;
                 padding: 3px 18px;

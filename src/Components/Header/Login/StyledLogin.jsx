@@ -75,6 +75,28 @@ export const StyledLogin = styled.div`
     }
     .login_body{
         .form_group{
+            position: relative;
+            .show_hide_btn{
+                position: absolute;
+                top: 0;
+                right: 0;
+                min-width: 45px;
+                height: 45px;
+                line-height: 45px;
+                padding: 0;
+                border: 0;
+                border-radius: 5px;
+                font-size: 22px;
+                background: transparent;
+                cursor: pointer;
+                svg{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            
             margin-bottom: 15px;
             .form-input{
                 width: 100%;

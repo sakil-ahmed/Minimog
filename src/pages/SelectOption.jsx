@@ -17,7 +17,7 @@ export const SelectOption = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(() => {
-    const getData = CARD.filter((data , i) => data.to === to);
+    const getData = CARD.filter((data) => data.to === to);
     setData(getData);
   },[]);
 
