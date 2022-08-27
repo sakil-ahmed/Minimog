@@ -7,11 +7,23 @@ import "swiper/css/effect-fade";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper";
 
 import { StyledHero } from "./StyledHero";
-import heroSliderImg1 from "./../../../public/Images/Home_slider/h_slide_01.jpg";
-import heroSliderImg2 from "./../../../public/Images/Home_slider/h_slide_02.jpg";
-import heroSliderImg3 from "./../../../public/Images/Home_slider/h_slide_03.jpg";
 
 export const HeroSlider = () => {
+  const heroSliderCard = [
+    {
+      title: "Exquisite Tailored Boxy Cut",
+      img: "Images/Home_slider/h_slide_01.jpg",
+    },
+    {
+      title: "Clean Vibe This Summer",
+      img: "Images/Home_slider/h_slide_02.jpg",
+    },
+    {
+      title: "Spring/Summer Essential Collection",
+      img: "Images/Home_slider/h_slide_03.jpg",
+    },
+  ];
+
   return (
     <StyledHero>
       <Swiper
@@ -29,15 +41,13 @@ export const HeroSlider = () => {
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img src={heroSliderImg1} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={heroSliderImg2} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={heroSliderImg3} alt="" />
-        </SwiperSlide>
+        {heroSliderCard.map(({ title, img }, i) => {
+          return (
+            <SwiperSlide key={i}>
+              <img src={img} alt="" />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </StyledHero>
   );

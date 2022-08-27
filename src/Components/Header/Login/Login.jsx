@@ -10,6 +10,11 @@ export const Login = ({
   handleClickLogin,
   handleClickRegister,
 }) => {
+  /* Setting the state of the form to false and then setting the state of the user to an object with a
+name and password. Then it is setting the form to a ref. Then it is setting the handleChange to set
+the user state to the current user state and the target name and target value. Then it is setting
+the handleSubmit to prevent the default action and reset the form and then log the user. Then it is
+setting the handlePassword to set the type to the current type. */
   const [type, setType] = useState(false);
   const [user, setUser] = useState({ name: "", password: "" });
   const form = useRef(null);

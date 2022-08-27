@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { THEME } from "./../../Styles/Theme";
 import { media } from "./../../Styles/Responsive";
+import heroSliderImg1 from "./../../../public/Images/Home_slider/h_slide_01.jpg";
 
 export const StyledHero = styled.div`
   .swiper-button-prev,
@@ -11,7 +12,7 @@ export const StyledHero = styled.div`
     position: relative;
     img {
       width: 100%;
-      height: 100%;
+      object-fit: cover;
     }
   }
   .swiper-pagination {
@@ -42,5 +43,10 @@ export const StyledHero = styled.div`
       background: transparent;
       border: 1px solid ${THEME.colors.primary};
     }
+  }
+  .slider_bg_img {
+    position: relative;
+    width: 100vw;
+    height: auto;
   }
 `;

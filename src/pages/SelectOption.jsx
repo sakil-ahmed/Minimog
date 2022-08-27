@@ -12,6 +12,7 @@ import "swiper/css/thumbs";
 import { CardDetails } from "../Components/Card/CardDetails/CardDetails";
 
 export const SelectOption = () => {
+  /* This is a react hook. It is a function that lets you hook into react features. */
   const { to } = useParams();
   const [data, setData] = useState("");
   const [thumbsSwiper, setThumbsSwiper] = useState(null);

@@ -10,6 +10,9 @@ export const TimerCoundown = () => {
 
   let interval;
 
+  /**
+   * It takes the current date and time and subtracts it from the date and time of the event.
+   */
   const startTimer = () => {
     const coundownDate = new Date("Sep 20 , 2022").getTime();
 
@@ -37,6 +40,7 @@ export const TimerCoundown = () => {
     });
   };
 
+  /* Calling the startTimer function. */
   useEffect(() => startTimer());
 
   return (

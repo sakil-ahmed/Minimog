@@ -6,6 +6,7 @@ import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
 
 export const Register = ({ handleClickRegister, handleClickLogin }) => {
+  /* Setting the state of the user object. */
   const [type, setType] = useState(false);
   const [user, setUser] = useState({
     name: "",

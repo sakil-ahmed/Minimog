@@ -21,29 +21,29 @@ import { Register } from "./Register/Register";
 import { ForgetPass } from "./Login/ForgetPass";
 
 export const Header = () => {
-  const [isActive, setIsActive] = useState(false);
-  const [isActiveCart, setIsActiveCart] = useState(false);
-  const [isActiveSearch, setIsActiveSearch] = useState(false);
-  const [isActiveLogin, setIsActiveLogin] = useState(false);
-  const [isActiveRegister, setIsActiveRegister] = useState(false);
-  const [isActiveReset, setIsActiveReset] = useState(false);
   const ref = useRef(null);
 
+  /* A state that is used to toggle the class of the element. */
   // Mobile Menu
+  const [isActive, setIsActive] = useState(false);
   const handleClick = (event) => setIsActive(!isActive);
   // Shoping Cart
+  const [isActiveCart, setIsActiveCart] = useState(false);
   const handleClickCart = (event) => setIsActiveCart(!isActiveCart);
   // Search menu
+  const [isActiveSearch, setIsActiveSearch] = useState(false);
   const handleClickSearch = (event) => setIsActiveSearch(!isActiveSearch);
   // login
+  const [isActiveLogin, setIsActiveLogin] = useState(false);
   const handleClickLogin = (event) => setIsActiveLogin(!isActiveLogin);
   // Reset Password
+  const [isActiveReset, setIsActiveReset] = useState(false);
   const handleClickReset = (event) => setIsActiveReset(!isActiveReset);
   // Register
+  const [isActiveRegister, setIsActiveRegister] = useState(false);
   const handleClickRegister = (event) => setIsActiveRegister(!isActiveRegister);
 
-  // close all menu
-
+  /* Checking if any of the states are true, if they are it will add a margin to the body. */
   useEffect(() => {
     if (isActive === true) {
       document.body.style.overflow = "hidden";
@@ -67,6 +67,9 @@ export const Header = () => {
       document.body.style.overflow = "auto";
       document.body.style.marginRight = "0";
     }
+    /**
+     * If the screen is less than 768px, then the body margin-right is set to 0.
+     */
     const mobileDevice = (mobile) => {
       if (mobile.matches) {
         document.body.style.marginRight = "0";
