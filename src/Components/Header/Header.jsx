@@ -80,7 +80,6 @@ export const Header = () => {
     mobile.addEventListener("", mobileDevice);
   }, [
     isActiveLogin,
-    isActive,
     isActiveCart,
     isActiveSearch,
     isActiveRegister,
