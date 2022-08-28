@@ -45,10 +45,7 @@ export const Header = () => {
 
   /* Checking if any of the states are true, if they are it will add a margin to the body. */
   useEffect(() => {
-    if (isActive === true) {
-      document.body.style.overflow = "hidden";
-      document.body.style.marginRight = "17px";
-    } else if (isActiveCart === true) {
+    if (isActiveCart === true) {
       document.body.style.overflow = "hidden";
       document.body.style.marginRight = "17px";
     } else if (isActiveSearch === true) {
