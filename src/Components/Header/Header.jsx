@@ -75,7 +75,7 @@ export const Header = () => {
     const mobileDevice = (mobile) => {
       if (mobile.matches) {
         document.body.style.marginRight = "0";
-        document.body.style.overflow = "auto";
+        document.body.style.overflow = "hidden";
       }
     };
     let mobile = window.matchMedia("(max-width: 768px)");
