@@ -64,17 +64,6 @@ export const Header = () => {
       document.body.style.overflow = "auto";
       document.body.style.marginRight = "0";
     }
-    /**
-     * If the screen is less than 768px, then the body margin-right is set to 0.
-     */
-    const mobileDevice = (mobile) => {
-      if (mobile.matches) {
-        document.body.style.marginRight = "0";
-      }
-    };
-    let mobile = window.matchMedia("(max-width: 768px)");
-    mobileDevice(mobile);
-    mobile.addEventListener("", mobileDevice);
   }, [
     isActiveLogin,
     isActiveCart,
