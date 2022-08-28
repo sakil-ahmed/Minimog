@@ -27,8 +27,6 @@ export const Header = () => {
   // Mobile Menu
   const [isActive, setIsActive] = useState(false);
   const handleClick = (event) => setIsActive(!isActive);
-  const [scroll, setScroll] = useState(false);
-  const handleScroll = (event) => setScroll(!scroll);
   // Shoping Cart
   const [isActiveCart, setIsActiveCart] = useState(false);
   const handleClickCart = (event) => setIsActiveCart(!isActiveCart);
@@ -47,7 +45,7 @@ export const Header = () => {
 
   /* Checking if any of the states are true, if they are it will add a margin to the body. */
   useEffect(() => {
-    if (scroll === true) {
+    if (isActive === true) {
       document.body.style.overflow = "hidden";
       document.body.style.marginRight = "17px";
     } else if (isActiveCart === true) {
@@ -75,14 +73,13 @@ export const Header = () => {
     const mobileDevice = (mobile) => {
       if (mobile.matches) {
         document.body.style.marginRight = "0";
-        document.body.style.overflow = "hidden";
       }
     };
     let mobile = window.matchMedia("(max-width: 768px)");
     mobileDevice(mobile);
     mobile.addEventListener("", mobileDevice);
   }, [
-    scroll,
+    isActive,
     isActiveLogin,
     isActiveCart,
     isActiveSearch,
@@ -122,7 +119,7 @@ export const Header = () => {
           >
             <div className="mobile_menu_inner">
               <nav>
-                <ul onClick={handleClick}>
+                <ul>
                   {ROUTES.map(({ to, name }) => (
                     <li key={name}>
                       <CustomNavLink linkTo={to} linkName={name} />
@@ -130,7 +127,7 @@ export const Header = () => {
                   ))}
                 </ul>
               </nav>
-              <div className="account" onClick={handleClick}>
+              <div className="account">
                 <div className="account_icon">
                   <AiOutlineUser size="20px" />
                   My Account
