@@ -27,6 +27,8 @@ export const Header = () => {
   // Mobile Menu
   const [isActive, setIsActive] = useState(false);
   const handleClick = (event) => setIsActive(!isActive);
+  const [scroll, setScroll] = useState(false);
+  const handleScroll = (event) => setScroll(!scroll);
   // Shoping Cart
   const [isActiveCart, setIsActiveCart] = useState(false);
   const handleClickCart = (event) => setIsActiveCart(!isActiveCart);
@@ -45,7 +47,10 @@ export const Header = () => {
 
   /* Checking if any of the states are true, if they are it will add a margin to the body. */
   useEffect(() => {
-    if (isActiveCart === true) {
+    if (scroll === true) {
+      document.body.style.overflow = "hidden";
+      document.body.style.marginRight = "17px";
+    } else if (isActiveCart === true) {
       document.body.style.overflow = "hidden";
       document.body.style.marginRight = "17px";
     } else if (isActiveSearch === true) {
@@ -64,7 +69,20 @@ export const Header = () => {
       document.body.style.overflow = "auto";
       document.body.style.marginRight = "0";
     }
+    /**
+     * If the screen is less than 768px, then the body margin-right is set to 0.
+     */
+    const mobileDevice = (mobile) => {
+      if (mobile.matches) {
+        document.body.style.marginRight = "0";
+        document.body.style.overflow = "auto";
+      }
+    };
+    let mobile = window.matchMedia("(max-width: 768px)");
+    mobileDevice(mobile);
+    mobile.addEventListener("", mobileDevice);
   }, [
+    scroll,
     isActiveLogin,
     isActiveCart,
     isActiveSearch,
@@ -83,7 +101,13 @@ export const Header = () => {
         <div className="wrapper">
           {/* Header left */}
           <div className="left">
-            <div className="mobile_menu" onClick={handleClick}>
+            <div
+              className="mobile_menu"
+              onClick={() => {
+                handleClick();
+                handleScroll();
+              }}
+            >
               <AiOutlineMenu size="22px" color="#000" />
             </div>
             <div className="logo">
@@ -124,7 +148,13 @@ export const Header = () => {
                 </div>
               </div>
             </div>
-            <div className="mobile_menu_close" onClick={handleClick}>
+            <div
+              className="mobile_menu_close"
+              onClick={() => {
+                handleClick();
+                handleScroll();
+              }}
+            >
               <AiOutlineClose color="#fff" size="13px" fontWeight="900" />
             </div>
           </div>
