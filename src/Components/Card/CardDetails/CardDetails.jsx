@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BsStar } from "react-icons/bs";
 import { StyledCardDetails } from "./StyledCardDetails";
 import { Link } from "react-router-dom";
@@ -9,9 +9,55 @@ import { BsQuestionCircle } from "react-icons/bs";
 import { BiShareAlt } from "react-icons/bi";
 import { TbTruckDelivery } from "react-icons/tb";
 import { BsBoxSeam } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
 import img from "./../../../../public/Images/product-trust-badge.png";
 
 export const CardDetails = ({ heading, price, disprice }) => {
+  // Products Size
+  const [size, setSize] = useState();
+  const s = useRef();
+  const m = useRef();
+  const l = useRef();
+  const xl = useRef();
+  const xs = useRef();
+  const clear = useRef();
+  const HandleSizeXS = () => {
+    const xsSize = xs.current.getAttribute("bata-size");
+    setSize(xsSize);
+    clear.current.style.visibility = "visible";
+    clear.current.style.height = "fit-content";
+  };
+  const HandleSizeS = () => {
+    const sSize = s.current.getAttribute("bata-size");
+    setSize(sSize);
+    clear.current.style.visibility = "visible";
+    clear.current.style.height = "fit-content";
+  };
+  const HandleSizeM = () => {
+    const mSize = m.current.getAttribute("bata-size");
+    setSize(mSize);
+    clear.current.style.visibility = "visible";
+    clear.current.style.height = "fit-content";
+  };
+  const HandleSizeL = () => {
+    const lSize = l.current.getAttribute("bata-size");
+    setSize(lSize);
+    clear.current.style.visibility = "visible";
+    clear.current.style.height = "fit-content";
+  };
+  const HandleSizeXL = () => {
+    const xlSize = xl.current.getAttribute("bata-size");
+    setSize(xlSize);
+    clear.current.style.visibility = "visible";
+    clear.current.style.height = "fit-content";
+  };
+  // clear size
+  const handleClear = () => {
+    clear.current.style.visibility = "hidden";
+    clear.current.style.height = "0";
+    setSize("");
+  };
+  // Products count
   const [number, setNumber] = useState(1);
 
   const increase = () => setNumber(number + 1);
@@ -45,24 +91,28 @@ export const CardDetails = ({ heading, price, disprice }) => {
           <div className="color_2"></div>
         </div>
         <div className="size">
-          <span className="text_size">Size :</span>
+          <span className="text_size">Size :{size}</span>
           <div className="size_btn">
-            <div className="btn">
+            <div ref={xs} className="btn" bata-size="XS" onClick={HandleSizeXS}>
               <span title="XS">XS</span>
             </div>
-            <div className="btn">
+            <div ref={s} className="btn" bata-size="XS" onClick={HandleSizeS}>
               <span>S</span>
             </div>
-            <div className="btn">
+            <div ref={m} className="btn" bata-size="XS" onClick={HandleSizeM}>
               <span>M</span>
             </div>
-            <div className="btn">
+            <div ref={l} className="btn" bata-size="XS" onClick={HandleSizeL}>
               <span>L</span>
             </div>
-            <div className="btn">
+            <div ref={xl} className="btn" bata-size="XS" onClick={HandleSizeXL}>
               <span>XL</span>
             </div>
           </div>
+          <span ref={clear} className="clear_size" onClick={handleClear}>
+            <AiOutlineClose />
+            clear
+          </span>
         </div>
       </div>
       <div className="entry_product_quantity_wrapper">
