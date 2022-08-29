@@ -96,16 +96,16 @@ export const CardDetails = ({ heading, price, disprice }) => {
             <div ref={xs} className="btn" bata-size="XS" onClick={HandleSizeXS}>
               <span title="XS">XS</span>
             </div>
-            <div ref={s} className="btn" bata-size="XS" onClick={HandleSizeS}>
+            <div ref={s} className="btn" bata-size="S" onClick={HandleSizeS}>
               <span>S</span>
             </div>
-            <div ref={m} className="btn" bata-size="XS" onClick={HandleSizeM}>
+            <div ref={m} className="btn" bata-size="M" onClick={HandleSizeM}>
               <span>M</span>
             </div>
-            <div ref={l} className="btn" bata-size="XS" onClick={HandleSizeL}>
+            <div ref={l} className="btn" bata-size="L" onClick={HandleSizeL}>
               <span>L</span>
             </div>
-            <div ref={xl} className="btn" bata-size="XS" onClick={HandleSizeXL}>
+            <div ref={xl} className="btn" bata-size="XL" onClick={HandleSizeXL}>
               <span>XL</span>
             </div>
           </div>
