@@ -60,17 +60,17 @@ export const Card = (props) => {
             </div>
           </div>
           <div className="cta">
-            <Link to={to}>{btntext}</Link>
+            <Link to={`/shop/${to}`}>{btntext}</Link>
           </div>
         </div>
       </div>
       {/* Card text */}
       <div className="card-bottom">
         <h4 className="subtitle">
-          <Link to={to}>{subtitle}</Link>
+          <Link to={`/shop/${to}`}>{subtitle}</Link>
         </h4>
         <h3 className="title">
-          <Link to={to}>{title}</Link>
+          <Link to={`/shop/${to}`}>{title}</Link>
         </h3>
         {disPrice ? (
           <del>
