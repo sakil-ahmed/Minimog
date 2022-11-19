@@ -102,7 +102,7 @@ export const Header = () => {
               className="mobile_menu"
               onClick={() => {
                 handleClick();
-                handleScroll();
+                // handleScroll();
               }}
             >
               <AiOutlineMenu size="22px" color="#000" />
@@ -149,7 +149,7 @@ export const Header = () => {
               className="mobile_menu_close"
               onClick={() => {
                 handleClick();
-                handleScroll();
+                // handleScroll();
               }}
             >
               <AiOutlineClose color="#fff" size="13px" fontWeight="900" />

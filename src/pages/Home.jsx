@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "../Components/Card/Card";
 import { CARD } from "../Components/Card/CardRoutes";
 import elementor_img from "./../../public/Images/h_cta.jpg";
@@ -9,6 +9,7 @@ import { TimerCoundown } from "../Components/Timer/TimerCoundown";
 import { HeroSlider } from "../Components/HeroSlider/HeroSlider";
 
 export const Home = () => {
+  const [load, setLoad] = useState(4);
   return (
     <StyledHome>
       <div className="hero_section">
@@ -21,7 +22,7 @@ export const Home = () => {
             <h2 className="title">This week’s highlights</h2>
           </div>
           <div className="card_container">
-            {CARD.map((props, i) => {
+            {CARD.slice(0, load).map((props, i) => {
               const {
                 mainImg,
                 hoverImg,
@@ -50,7 +51,12 @@ export const Home = () => {
             })}
           </div>
           <div className="product_card_cta">
-            <button className="shop_now_btn btn">Shop Now</button>
+            <button
+              className="shop_now_btn btn"
+              onClick={() => setLoad((prev) => prev + 4)}
+            >
+              Load More
+            </button>
           </div>
         </div>
       </div>

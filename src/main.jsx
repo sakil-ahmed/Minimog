@@ -5,7 +5,7 @@ import App from "./App";
 import { GlobalStyles } from "./Styles/Globalstyle";
 import { Shop } from "./pages/Shop";
 import { Products } from "./pages/Products";
-import { Blog } from "./pages/Blog";
+import { Blogs } from "./pages/Blogs";
 import { Pages } from "./pages/Pages";
 import { Home } from "./pages/Home";
 import { SelectOption } from "./pages/SelectOption";
@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/products" element={<Products />} />
           <Route path="/:to" element={<SelectOption />} />
           <Route path="/wishlist" element={<WishList />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog" element={<Blogs />} />
           <Route path="/pages" element={<Pages />} />
         </Route>
       </Routes>
