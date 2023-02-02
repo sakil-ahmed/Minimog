@@ -57,10 +57,10 @@ setting the handlePassword to set the type to the current type. */
           <div className="form_group">
             <input
               type="text"
-              id="name"
+              id="userName"
               onChange={handleChange}
               className="form-control form-input"
-              name="name"
+              name="userName"
               placeholder="Your username or email"
               required
             />

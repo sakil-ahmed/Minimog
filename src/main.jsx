@@ -10,6 +10,7 @@ import { Pages } from "./pages/Pages";
 import { Home } from "./pages/Home";
 import { SelectOption } from "./pages/SelectOption";
 import { WishList } from "./pages/WishList";
+import PageNotFound from "./pages/404";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/wishlist" element={<WishList />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/pages" element={<Pages />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
