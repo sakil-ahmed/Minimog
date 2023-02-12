@@ -46,7 +46,7 @@ export const StyledHome = styled.div`
         margin-top: 57px;
       }
       .shop_now_btn {
-        padding: 0 33px;
+        padding: 10px 33px;
         min-height: 45px;
         border: 1px solid ${THEME.colors.primary};
         border-radius: 5px;

@@ -1,9 +1,18 @@
 import styled from "styled-components";
 import { THEME } from "./../../Styles/Theme";
 import { media } from "./../../Styles/Responsive";
-import heroSliderImg1 from "./../../../public/Images/Home_slider/h_slide_01.jpg";
-
 export const StyledHero = styled.div`
+  .bg_img {
+    width: 100%;
+    height: 375px;
+    @media (min-width: 768px) {
+      height: 660px;
+    }
+    @media (min-width: 1440px) {
+      height: 820px;
+    }
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     display: none;

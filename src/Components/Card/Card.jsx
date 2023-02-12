@@ -6,8 +6,8 @@ import { CgArrowsExchangeAlt } from "react-icons/cg";
 
 import { StyledCard } from "./Style";
 
-export const Card = (props) => {
-  const {
+export const Card = ({
+  item: {
     mainImg,
     hoverImg,
     subtitle,
@@ -17,8 +17,8 @@ export const Card = (props) => {
     price,
     saleRate,
     to,
-  } = props;
-
+  },
+}) => {
   return (
     <StyledCard>
       <div className="card-top">
@@ -31,7 +31,7 @@ export const Card = (props) => {
         )}
 
         <div className="thumbnail">
-          <Link to={to}>
+          <Link to={`/products/${to}`}>
             {/* Card images */}
             <div className="card-main-img">
               <img src={mainImg} alt="" />
@@ -60,17 +60,17 @@ export const Card = (props) => {
             </div>
           </div>
           <div className="cta">
-            <Link to={`/shop/${to}`}>{btntext}</Link>
+            <Link to={`/products/${to}`}>{btntext}</Link>
           </div>
         </div>
       </div>
       {/* Card text */}
       <div className="card-bottom">
         <h4 className="subtitle">
-          <Link to={`/shop/${to}`}>{subtitle}</Link>
+          <Link to={`/products/${to}`}>{subtitle}</Link>
         </h4>
         <h3 className="title">
-          <Link to={`/shop/${to}`}>{title}</Link>
+          <Link to={`/products/${to}`}>{title}</Link>
         </h3>
         {disPrice ? (
           <del>

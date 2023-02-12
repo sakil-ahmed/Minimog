@@ -7,20 +7,21 @@ import "swiper/css/effect-fade";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper";
 
 import { StyledHero } from "./StyledHero";
+import { HeroCard } from "./HeroCard";
 
 export const HeroSlider = () => {
   const heroSliderCard = [
     {
       title: "Exquisite Tailored Boxy Cut",
-      img: "Images/Home_slider/h_slide_01.jpg",
+      img: "https://minimog.thememove.com/wp-content/uploads/2021/12/h8_slide_03.jpg",
     },
     {
       title: "Clean Vibe This Summer",
-      img: "Images/Home_slider/h_slide_02.jpg",
+      img: "https://minimog.thememove.com/wp-content/uploads/2021/12/h8_slide_02.jpg",
     },
     {
       title: "Spring/Summer Essential Collection",
-      img: "Images/Home_slider/h_slide_03.jpg",
+      img: "https://minimog.thememove.com/wp-content/uploads/2021/12/h8_slide_01.jpg",
     },
   ];
 
@@ -41,10 +42,20 @@ export const HeroSlider = () => {
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         className="mySwiper"
       >
-        {heroSliderCard.map(({ title, img }, i) => {
+        {heroSliderCard.map((item, i) => {
           return (
             <SwiperSlide key={i}>
-              <img src={img} alt="" />
+              <div
+                className="bg_img"
+                style={{
+                  backgroundImage: `url(${item.img})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                  backgroundPositionX: "center",
+                }}
+              >
+                <HeroCard item={item} />
+              </div>
             </SwiperSlide>
           );
         })}

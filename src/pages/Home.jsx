@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card } from "../Components/Card/Card";
-import { CARD } from "../Components/Card/CardRoutes";
 import elementor_img from "./../../public/Images/h_cta.jpg";
 import { Link } from "react-router-dom";
 import { StyledHome } from "../Styles/StyledHome";
 import { CatagoriesCard } from "./../Components/CatagoriesCard/CatagoriesCard";
 import { TimerCoundown } from "../Components/Timer/TimerCoundown";
 import { HeroSlider } from "../Components/HeroSlider/HeroSlider";
+import { useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 
 export const Home = () => {
-  const [load, setLoad] = useState(4);
+  const CardData = useSelector((state) => state.product.allProducts);
   return (
     <StyledHome>
+      <Helmet>
+        <title>Minimog | Home</title>
+      </Helmet>
       <div className="hero_section">
         <HeroSlider />
       </div>
@@ -22,41 +26,14 @@ export const Home = () => {
             <h2 className="title">This week’s highlights</h2>
           </div>
           <div className="card_container">
-            {CARD.slice(0, load).map((props, i) => {
-              const {
-                mainImg,
-                hoverImg,
-                subtitle,
-                title,
-                btntext,
-                disPrice,
-                price,
-                saleRate,
-                to,
-              } = props;
-              return (
-                <Card
-                  key={i}
-                  to={to}
-                  mainImg={mainImg}
-                  hoverImg={hoverImg}
-                  subtitle={subtitle}
-                  title={title}
-                  btntext={btntext}
-                  disPrice={disPrice}
-                  price={price}
-                  saleRate={saleRate}
-                />
-              );
+            {CardData.slice(0, 4).map((item, i) => {
+              return <Card key={i} item={item} />;
             })}
           </div>
           <div className="product_card_cta">
-            <button
-              className="shop_now_btn btn"
-              onClick={() => setLoad((prev) => prev + 4)}
-            >
-              Load More
-            </button>
+            <Link to="/shop" className="shop_now_btn btn">
+              Shop Now
+            </Link>
           </div>
         </div>
       </div>

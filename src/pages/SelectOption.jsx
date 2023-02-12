@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { CARD } from "../Components/Card/CardRoutes";
 import { StyledSelOpt } from "./../Styles/StyledSelOpt";
 // Swiper Slider
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,20 +9,26 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { CardDetails } from "../Components/Card/CardDetails/CardDetails";
+import { useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 
 export const SelectOption = () => {
   /* This is a react hook. It is a function that lets you hook into react features. */
   const { to } = useParams();
   const [data, setData] = useState("");
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const CardData = useSelector((state) => state.product.allProducts);
 
   useEffect(() => {
-    const getData = CARD.filter((data) => data.to === to);
+    const getData = CardData.filter((data) => data.to === to);
     setData(getData);
   }, []);
 
   return (
     <div className="container">
+      <Helmet>
+        <title>{data[0]?.title}</title>
+      </Helmet>
       <StyledSelOpt>
         <div className="left_column">
           <div className="slider">
