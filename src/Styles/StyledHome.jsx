@@ -137,7 +137,6 @@ export const StyledHome = styled.div`
         &::after {
           content: "";
           position: absolute;
-
           right: 0;
           bottom: 0;
           width: 100%;

@@ -1,6 +1,7 @@
 const CardData = [
   // 1
   {
+    id: 1,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/49a_345f6a56-aa62-4074-8544-b927fd02cfd2.jpg?v=1628348214&width=533",
     hoverImg:
@@ -16,6 +17,7 @@ const CardData = [
 
   // 2
   {
+    id: 2,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/42.jpg?v=1628348181&width=360",
     hoverImg:
@@ -30,6 +32,7 @@ const CardData = [
   },
   //   3
   {
+    id: 3,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/35h.jpg?v=1628348161&width=360",
     hoverImg:
@@ -44,6 +47,7 @@ const CardData = [
   },
   //   4
   {
+    id: 4,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/19_19abda91-ab20-4604-b397-9a68f0b5cce6.jpg?v=1628348094&width=360",
     hoverImg:
@@ -58,6 +62,7 @@ const CardData = [
   },
   //   5
   {
+    id: 5,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/37_3a2dbe18-a2a1-4d4a-be7a-6aafcd33ca96.jpg?v=1628347729&width=360",
     hoverImg:
@@ -73,6 +78,7 @@ const CardData = [
 
   //   6
   {
+    id: 6,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/3.jpg?v=1628347880&width=360",
     hoverImg:
@@ -87,6 +93,7 @@ const CardData = [
   },
   //   7
   {
+    id: 7,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/6_2175fb27-821a-4885-a1c7-836459c56ba7.jpg?v=1628347720&width=360",
     hoverImg:
@@ -101,6 +108,7 @@ const CardData = [
   },
   //   8
   {
+    id: 8,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/59.jpg?v=1628348257&width=360",
     hoverImg:
@@ -115,6 +123,7 @@ const CardData = [
   },
   //   9
   {
+    id: 9,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/57.jpg?v=1628348251&width=360",
     hoverImg:
@@ -129,6 +138,7 @@ const CardData = [
   },
   //   10
   {
+    id: 10,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/54_8558553c-a9dd-4474-bc2b-6707343dacbe.jpg?v=1628348240&width=533",
     hoverImg:
@@ -143,6 +153,7 @@ const CardData = [
   },
   //   11
   {
+    id: 11,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/53_bc12317d-e941-4097-9fd8-cc529c2b0cf1.jpg?v=1628348231&width=360",
     hoverImg:
@@ -157,6 +168,7 @@ const CardData = [
   },
   //   12
   {
+    id: 12,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/52_bec0360d-64e5-4b79-bb88-9b2dc30f34a2.jpg?v=1628348223&width=360",
     hoverImg:
@@ -171,6 +183,7 @@ const CardData = [
   },
   //   13
   {
+    id: 13,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/48.jpg?v=1628348212&width=360",
     hoverImg:
@@ -185,6 +198,7 @@ const CardData = [
   },
   //   14
   {
+    id: 14,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/46_145a4ab0-7b97-409a-b049-3768fd0e7a10.jpg?v=1628348207&width=360",
     hoverImg:
@@ -199,6 +213,7 @@ const CardData = [
   },
   //   15
   {
+    id: 15,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/45.jpg?v=1628348202&width=360",
     hoverImg:
@@ -213,6 +228,7 @@ const CardData = [
   },
   //   16
   {
+    id: 16,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/44_df90161a-7172-4fac-869a-c6af02c86d12.jpg?v=1628348196&width=360",
     hoverImg:
@@ -227,6 +243,7 @@ const CardData = [
   },
   //   17
   {
+    id: 17,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/43_cd75fbff-17e5-443f-9c4b-53ca3906de5c.jpg?v=1628348187&width=360",
     hoverImg:
@@ -241,6 +258,7 @@ const CardData = [
   },
   //   18
   {
+    id: 18,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/42.jpg?v=1628348181&width=533",
     hoverImg:
@@ -255,6 +273,7 @@ const CardData = [
   },
   //   19
   {
+    id: 19,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/40_c5a79318-cbbf-4f96-a1cf-5eef0009e9f5.jpg?v=1628348175&width=360",
     hoverImg:
@@ -269,6 +288,7 @@ const CardData = [
   },
   //   20
   {
+    id: 20,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/38_4b6920a7-196b-49a2-952d-2295e64a9b71.jpg?v=1628348168&width=360",
     hoverImg:
@@ -283,6 +303,7 @@ const CardData = [
   },
   //   21
   {
+    id: 21,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/35h.jpg?v=1628348161&width=360",
     hoverImg:
@@ -297,6 +318,7 @@ const CardData = [
   },
   //   22
   {
+    id: 22,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/33_ecbc9a95-9898-48b3-abe6-6aba72aaedcd.jpg?v=1628348151&width=360",
     hoverImg:
@@ -311,6 +333,7 @@ const CardData = [
   },
   //   23
   {
+    id: 23,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/32_69e4270c-14ea-4173-ae9e-0aa3edb9a14f.jpg?v=1628348144&width=360",
     hoverImg:
@@ -325,6 +348,7 @@ const CardData = [
   },
   //   24
   {
+    id: 24,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/24_ac7333d9-2e9f-47bd-9d42-97636c931292.jpg?v=1628348116&width=360",
     hoverImg:
@@ -339,6 +363,7 @@ const CardData = [
   },
   //   25
   {
+    id: 25,
     mainImg:
       "https://cdn.shopify.com/s/files/1/0591/1350/4958/products/14_41fe7948-e2db-43aa-871d-955f2e026da1.jpg?v=1628348078&width=360",
     hoverImg:

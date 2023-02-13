@@ -11,8 +11,13 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { BsBoxSeam } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import img from "./../../../../public/Images/product-trust-badge.png";
+import { addToCart } from "../../../redux/cart/cartSlice";
+import { useDispatch } from "react-redux";
 
-export const CardDetails = ({ heading, price, disprice }) => {
+export const CardDetails = ({ item }) => {
+  const { disprice, price, title, mainImg, id } = item;
+  const dispatch = useDispatch();
+
   // Products Size
   const [size, setSize] = useState();
   const s = useRef();
@@ -58,16 +63,16 @@ export const CardDetails = ({ heading, price, disprice }) => {
     setSize("");
   };
   // Products count
-  const [number, setNumber] = useState(1);
+  const [quantity, setQuantity] = useState(1);
 
-  const increase = () => setNumber(number + 1);
-  const decrease = () => setNumber(number - 1);
+  const increase = () => setQuantity(quantity + 1);
+  const decrease = () => setQuantity(quantity - 1);
 
   return (
     <StyledCardDetails>
       <div className="heading_top">
         <div className="top">
-          <h1 className="heading">{heading}</h1>
+          <h1 className="heading">{title}</h1>
           <div className="icon">
             <BsStar />
             <span className="tooltiptext Wishlist">Add to Wishlist</span>
@@ -75,7 +80,7 @@ export const CardDetails = ({ heading, price, disprice }) => {
         </div>
         <div className="bottom">
           <div className="amount">
-            {disprice ? <span className="disprice">{disprice}</span> : ""}
+            {disprice ? <span className="disprice"></span> : ""}
             <span className="price">{price}</span>
           </div>
           <div className="review">
@@ -123,14 +128,14 @@ export const CardDetails = ({ heading, price, disprice }) => {
               type="button"
               className=""
               onClick={decrease}
-              disabled={number === 1 ? true : false}
+              disabled={quantity === 1 ? true : false}
             >
               <AiOutlineMinus />
             </button>
             <input
               type="text"
               readOnly
-              value={number}
+              value={quantity}
               className="input-text qty text"
             />
             <button type="button" className="" onClick={increase}>
@@ -138,7 +143,13 @@ export const CardDetails = ({ heading, price, disprice }) => {
             </button>
           </div>
           <div className="btn_top">
-            <button type="submit" className="single_add_to_cart_button">
+            <button
+              onClick={() =>
+                dispatch(addToCart({ price, title, mainImg, id, quantity }))
+              }
+              type="submit"
+              className="single_add_to_cart_button"
+            >
               <span>Add to cart</span>
             </button>
           </div>

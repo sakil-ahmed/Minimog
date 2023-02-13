@@ -30,8 +30,8 @@ export const Shop = () => {
         </div>
         <div className="">
           <div className="card_container">
-            {data.map((item, i) => {
-              return <Card key={i} item={item} />;
+            {data.map((item) => {
+              return <Card key={item.id} item={item} />;
             })}
           </div>
         </div>

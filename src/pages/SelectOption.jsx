@@ -9,7 +9,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { CardDetails } from "../Components/Card/CardDetails/CardDetails";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
 
 export const SelectOption = () => {
@@ -21,13 +21,12 @@ export const SelectOption = () => {
 
   useEffect(() => {
     const getData = CardData.filter((data) => data.to === to);
-    setData(getData);
+    setData(getData[0]);
   }, []);
-
   return (
     <div className="container">
       <Helmet>
-        <title>{data[0]?.title}</title>
+        <title>{data?.title}</title>
       </Helmet>
       <StyledSelOpt>
         <div className="left_column">
@@ -43,10 +42,10 @@ export const SelectOption = () => {
                 className="mySwiper2"
               >
                 <SwiperSlide>
-                  <img src={data[0]?.mainImg} alt="" />
+                  <img src={data?.mainImg} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={data[0]?.hoverImg} alt="" />
+                  <img src={data?.hoverImg} alt="" />
                 </SwiperSlide>
               </Swiper>
             </div>
@@ -60,21 +59,17 @@ export const SelectOption = () => {
                 className="mySwiper"
               >
                 <SwiperSlide>
-                  <img src={data[0]?.mainImg} alt="" />
+                  <img src={data?.mainImg} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={data[0]?.hoverImg} alt="" />
+                  <img src={data?.hoverImg} alt="" />
                 </SwiperSlide>
               </Swiper>
             </div>
           </div>
         </div>
         <div className="right_column">
-          <CardDetails
-            heading={data[0]?.title}
-            price={data[0]?.price}
-            disprice={data[0]?.disPrice}
-          />
+          <CardDetails item={data} />
         </div>
       </StyledSelOpt>
     </div>

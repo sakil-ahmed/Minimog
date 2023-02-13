@@ -26,8 +26,8 @@ export const Home = () => {
             <h2 className="title">This week’s highlights</h2>
           </div>
           <div className="card_container">
-            {CardData.slice(0, 4).map((item, i) => {
-              return <Card key={i} item={item} />;
+            {CardData.slice(0, 4).map((item) => {
+              return <Card key={item.id} item={item} />;
             })}
           </div>
           <div className="product_card_cta">
