@@ -20,7 +20,7 @@ export const Card = ({
   },
 }) => {
   return (
-    <StyledCard>
+    <StyledCard data-aos="zoom-in">
       <div className="card-top">
         {saleRate ? (
           <div className="position sale_badge">

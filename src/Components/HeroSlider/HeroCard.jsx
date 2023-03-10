@@ -7,7 +7,7 @@ export const HeroCard = ({ item: { title, img } }) => {
     <StyledHeroCard>
       <div className="container">
         <div className="hero_content">
-          <div className="">
+          <div data-aos="fade-down" className="">
             <h4 className="sub_title">New Arrivals</h4>
             <h1 className="title">{title}</h1>
             <Link className="shop_now_btn" to="/shop">

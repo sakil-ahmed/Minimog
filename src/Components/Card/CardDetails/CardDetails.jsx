@@ -13,6 +13,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import img from "./../../../../public/Images/product-trust-badge.png";
 import { addToCart } from "../../../redux/cart/cartSlice";
 import { useDispatch } from "react-redux";
+import { addToWishlist } from "../../../redux/wishList/wishList";
 
 export const CardDetails = ({ item }) => {
   const { disprice, price, title, mainImg, id } = item;
@@ -73,7 +74,7 @@ export const CardDetails = ({ item }) => {
       <div className="heading_top">
         <div className="top">
           <h1 className="heading">{title}</h1>
-          <div className="icon">
+          <div className="icon" onClick={() => dispatch(addToWishlist(item))}>
             <BsStar />
             <span className="tooltiptext Wishlist">Add to Wishlist</span>
           </div>

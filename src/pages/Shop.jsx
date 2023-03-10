@@ -5,9 +5,19 @@ import { Link } from "react-router-dom";
 import StyledShop from "../Styles/StyledShop";
 import { Card } from "./../Components/Card/Card";
 import arrowIcon from "../../public/Images/Icon/rightArrow.svg";
+import { useQuery } from "react-query";
+import { allProducts } from "./../api/api";
+import ReactLoading from "react-loading";
 
 export const Shop = () => {
-  const data = useSelector((state) => state.product.allProducts);
+  // const data = useSelector((state) => state.product.allProducts);
+
+  const { data, isLoading } = useQuery({
+    queryKey: "products",
+    queryFn: allProducts,
+    refetchOnWindowFocus: false,
+  });
+
   return (
     <StyledShop>
       <Helmet>
@@ -29,11 +39,22 @@ export const Shop = () => {
           </div>
         </div>
         <div className="">
-          <div className="card_container">
-            {data.map((item) => {
-              return <Card key={item.id} item={item} />;
-            })}
-          </div>
+          {isLoading ? (
+            <div className="spinningBubbles">
+              <ReactLoading
+                type={"spinningBubbles"}
+                color={"#000"}
+                height={80}
+                width={80}
+              />
+            </div>
+          ) : (
+            <div className="card_container">
+              {data.map((item) => {
+                return <Card key={item.id} item={item} />;
+              })}
+            </div>
+          )}
         </div>
       </div>
     </StyledShop>

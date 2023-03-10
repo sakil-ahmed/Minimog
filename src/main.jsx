@@ -14,24 +14,31 @@ import {
 } from "./pages";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const client = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     <Provider store={store}>
-      <GlobalStyles />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<Home />} />
-            <Route path="*" element={<PageNotFound />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:to" element={<SelectOption />} />
-            <Route path="/wishlist" element={<WishList />} />
-            <Route path="/blog" element={<Blogs />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <QueryClientProvider client={client}>
+        <GlobalStyles />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<App />}>
+              <Route index element={<Home />} />
+              <Route path="*" element={<PageNotFound />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/products/:to" element={<SelectOption />} />
+              <Route path="/wishlist" element={<WishList />} />
+              <Route path="/blog" element={<Blogs />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+        {/* <ReactQueryDevtools /> */}
+      </QueryClientProvider>
     </Provider>
   </>
 );

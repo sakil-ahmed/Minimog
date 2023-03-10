@@ -4,9 +4,7 @@ import { ROUTES } from "./../../routes";
 import { CustomNavLink } from "./CustomNavLink";
 import { Link } from "react-router-dom";
 import { HeaderTop } from "./HeaderTop";
-import { AiOutlineMenu } from "react-icons/ai";
-import { AiOutlineClose } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineUser, AiOutlineClose } from "react-icons/ai";
 import Logo from "../../../public/Images/dark-logo.png";
 import icon1 from "../../../public/Images/Icon/login.svg";
 import icon2 from "../../../public/Images/Icon/search.svg";
@@ -22,6 +20,7 @@ import { useSelector } from "react-redux";
 export const Header = () => {
   const ref = useRef(null);
   const cartItems = useSelector((state) => state.cartItem.cartItems);
+  const wishListItems = useSelector((state) => state.wishList.wishListItems);
 
   /* A state that is used to toggle the class of the element. */
   // Mobile Menu
@@ -173,7 +172,7 @@ export const Header = () => {
             <div className="header-icon tooltip display_none">
               <Link to="wishlist">
                 <img src={icon3} alt="Wishlist Icon" />
-                <span className="icon-badge">0</span>
+                <span className="icon-badge">{wishListItems.length}</span>
               </Link>
               <span className="tooltiptext">Wishlist</span>
             </div>

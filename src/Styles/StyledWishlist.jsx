@@ -1,19 +1,6 @@
 import styled from "styled-components";
-import { media } from "./Responsive";
 
-const StyledShop = styled.section`
-  .card_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-    padding-top: 50px;
-    ${media.up("md")} {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    ${media.up("lg")} {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-  }
+const StyledWishlist = styled.section`
   .collection_header {
     padding: 50px 0;
     &_title {
@@ -43,11 +30,6 @@ const StyledShop = styled.section`
       }
     }
   }
-  .spinningBubbles {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
 `;
 
-export default StyledShop;
+export default StyledWishlist;
