@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import CardData from "./../../../data/data";
 const initialState = {
   allProducts: [],
   isLoading: false,

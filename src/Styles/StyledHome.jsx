@@ -72,6 +72,7 @@ export const StyledHome = styled.div`
   /* Elementor section */
   .elementor_section {
     margin-top: 40px;
+    overflow: hidden;
     ${media.up("lg")} {
       margin-top: 100px;
     }
@@ -193,6 +194,7 @@ export const StyledHome = styled.div`
     padding: 40px 0;
     width: 100%;
     min-height: 270px;
+    overflow: hidden;
     ${media.up("md")} {
       background-position: 30% 50%;
     }
