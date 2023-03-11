@@ -14,7 +14,7 @@ const CartFooter = () => {
     0
   );
 
-  const shipingPrice = 10.0;
+  const shipingPrice = subTotal >= 200 ? 0 : 10.0;
 
   const total = subTotal + shipingPrice;
 
@@ -42,7 +42,7 @@ const CartFooter = () => {
           </p>
           <p className="sub__total__shiping d__flex">
             <span>Shipping</span>
-            <span>${shipingPrice}.00</span>
+            <span>{shipingPrice === 0 ? "FREE" : `$${shipingPrice}.00`}</span>
           </p>
         </div>
         <div className="total">
