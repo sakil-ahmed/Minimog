@@ -17,7 +17,7 @@ import { allProducts } from "../api/api";
 export const SelectOption = () => {
   /* This is a react hook. It is a function that lets you hook into react features. */
   const { to } = useParams();
-  // const [singleProduct, setSingleProduct] = useState("");
+
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const { data, isLoading } = useQuery({
@@ -28,12 +28,12 @@ export const SelectOption = () => {
 
   const singleData = data?.find((item) => item.to === to);
 
-  console.log(singleData);
   return (
     <>
       <Helmet>
         <title>{singleData?.title}</title>
       </Helmet>
+
       {isLoading ? (
         "Loading..."
       ) : (

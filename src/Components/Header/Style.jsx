@@ -170,6 +170,8 @@ export const StyledHeader = styled.header`
     .header-icon {
       padding: 0 14px;
       position: relative;
+      cursor: pointer;
+
       img {
         transition: 0.3s;
         min-width: 22px;
@@ -332,6 +334,8 @@ export const StyledHeader = styled.header`
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     cursor: url(${cursorImg}) 16 16, pointer;
     .popup_cart_inner {
+      height: 100vh;
+      overflow: auto;
       position: relative;
       height: 100%;
       max-width: 90%;
@@ -341,7 +345,18 @@ export const StyledHeader = styled.header`
       width: 450px;
       background: ${THEME.colors.light};
       box-shadow: 0 0 10px rgb(0 0 0 / 5%);
-      padding: 0 20px;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #f2f2f2;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 4px;
+      }
       .close_cart_btn {
         position: absolute;
         top: 5px;
@@ -363,11 +378,25 @@ export const StyledHeader = styled.header`
         .fly_cart_title {
           font-size: 24px;
           font-weight: 500;
-          margin: 0;
+          margin: 26px 24px 28px;
         }
       }
 
       .fly_cart_body {
+        padding: 0 20px;
+        height: 400px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+          width: 3px;
+          height: 3px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: #f2f2f2;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #ccc;
+          border-radius: 4px;
+        }
         .empty_cart_icon {
           width: 240px;
           max-width: 80%;

@@ -79,7 +79,7 @@ export const Card = ({
         ) : (
           ""
         )}
-        <span className="main-price">{price}</span>
+        <span className="main-price">${price}.00</span>
       </div>
     </StyledCard>
   );

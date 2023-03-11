@@ -16,52 +16,17 @@ import { useDispatch } from "react-redux";
 import { addToWishlist } from "../../../redux/wishList/wishList";
 
 export const CardDetails = ({ item }) => {
-  const { disprice, price, title, mainImg, id } = item;
+  const { disprice, price, title, mainImg, id, size } = item;
   const dispatch = useDispatch();
 
   // Products Size
-  const [size, setSize] = useState();
-  const s = useRef();
-  const m = useRef();
-  const l = useRef();
-  const xl = useRef();
-  const xs = useRef();
-  const clear = useRef();
-  const HandleSizeXS = () => {
-    const xsSize = xs.current.getAttribute("bata-size");
-    setSize(xsSize);
-    clear.current.style.visibility = "visible";
-    clear.current.style.height = "fit-content";
-  };
-  const HandleSizeS = () => {
-    const sSize = s.current.getAttribute("bata-size");
-    setSize(sSize);
-    clear.current.style.visibility = "visible";
-    clear.current.style.height = "fit-content";
-  };
-  const HandleSizeM = () => {
-    const mSize = m.current.getAttribute("bata-size");
-    setSize(mSize);
-    clear.current.style.visibility = "visible";
-    clear.current.style.height = "fit-content";
-  };
-  const HandleSizeL = () => {
-    const lSize = l.current.getAttribute("bata-size");
-    setSize(lSize);
-    clear.current.style.visibility = "visible";
-    clear.current.style.height = "fit-content";
-  };
-  const HandleSizeXL = () => {
-    const xlSize = xl.current.getAttribute("bata-size");
-    setSize(xlSize);
-    clear.current.style.visibility = "visible";
-    clear.current.style.height = "fit-content";
-  };
+  const [selectedSize, setSelectedSize] = useState();
+
+  const handleSelectedSize = (size) => setSelectedSize(size);
+
   // clear size
   const handleClear = () => {
-    clear.current.style.visibility = "hidden";
-    clear.current.style.height = "0";
-    setSize("");
+    setSelectedSize();
   };
   // Products count
   const [quantity, setQuantity] = useState(1);
@@ -82,7 +47,7 @@ export const CardDetails = ({ item }) => {
         <div className="bottom">
           <div className="amount">
             {disprice ? <span className="disprice"></span> : ""}
-            <span className="price">{price}</span>
+            <span className="price">${price}.00</span>
           </div>
           <div className="review">
             <span className="star">☆☆☆☆☆</span>
@@ -96,29 +61,30 @@ export const CardDetails = ({ item }) => {
           <div className="color_1"></div>
           <div className="color_2"></div>
         </div>
+
         <div className="size">
-          <span className="text_size">Size :{size}</span>
+          <span className="text_size">Size :{selectedSize}</span>
           <div className="size_btn">
-            <div ref={xs} className="btn" bata-size="XS" onClick={HandleSizeXS}>
-              <span title="XS">XS</span>
-            </div>
-            <div ref={s} className="btn" bata-size="S" onClick={HandleSizeS}>
-              <span>S</span>
-            </div>
-            <div ref={m} className="btn" bata-size="M" onClick={HandleSizeM}>
-              <span>M</span>
-            </div>
-            <div ref={l} className="btn" bata-size="L" onClick={HandleSizeL}>
-              <span>L</span>
-            </div>
-            <div ref={xl} className="btn" bata-size="XL" onClick={HandleSizeXL}>
-              <span>XL</span>
-            </div>
+            {size.map((item, i) => {
+              return (
+                <div
+                  className="btn"
+                  key={i}
+                  onClick={() => handleSelectedSize(item)}
+                >
+                  <span title="XS">{item}</span>
+                </div>
+              );
+            })}
           </div>
-          <span ref={clear} className="clear_size" onClick={handleClear}>
-            <AiOutlineClose />
-            clear
-          </span>
+          {selectedSize ? (
+            <span className="clear_size" onClick={handleClear}>
+              <AiOutlineClose />
+              clear
+            </span>
+          ) : (
+            ""
+          )}
         </div>
       </div>
       <div className="entry_product_quantity_wrapper">

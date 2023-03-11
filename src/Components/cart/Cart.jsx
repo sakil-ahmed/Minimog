@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import cartEmpty from "./../../../public/Images/empty-cart.png";
 import { useSelector } from "react-redux";
 import CartItem from "../cartItem/CartItem";
+import CartFooter from "./cartFooter/CartFooter";
 
 const Cart = ({ handleClickCart }) => {
   const cartItems = useSelector((state) => state.cartItem.cartItems);
@@ -51,6 +52,7 @@ const Cart = ({ handleClickCart }) => {
           </>
         )}
       </div>
+      {cartItems.length === 0 ? "" : <CartFooter />}
     </div>
   );
 };

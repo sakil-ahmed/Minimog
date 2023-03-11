@@ -152,14 +152,14 @@ export const StyledCardDetails = styled.div`
         display: flex;
         align-items: center;
         cursor: pointer;
-        visibility: hidden;
         width: fit-content;
-        height: 0;
         color: ${THEME.colors.primary};
+
         &:hover {
           color: ${THEME.colors.lighten};
         }
       }
+
       .size_btn {
         margin-top: 11px;
         .btn {
