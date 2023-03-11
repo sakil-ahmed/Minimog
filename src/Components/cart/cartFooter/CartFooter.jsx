@@ -53,7 +53,7 @@ const CartFooter = () => {
         </div>
       </div>
       <div className="checkout">
-        <Link className="checkout__btn" to={"#"}>
+        <Link className="checkout__btn" to={"/checkout"}>
           Checkout
         </Link>
       </div>

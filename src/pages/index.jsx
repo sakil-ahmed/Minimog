@@ -5,3 +5,4 @@ export { PageNotFound } from "./404";
 export { Shop } from "./Shop";
 export { WishList } from "./WishList";
 export { SelectOption } from "./SelectOption";
+export { Checkout } from "./Checkout";

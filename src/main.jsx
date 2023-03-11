@@ -11,6 +11,7 @@ import {
   Shop,
   WishList,
   SelectOption,
+  Checkout,
 } from "./pages";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
@@ -38,6 +39,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/products/:to" element={<SelectOption />} />
                 <Route path="/wishlist" element={<WishList />} />
                 <Route path="/blog" element={<Blogs />} />
+                <Route path="/checkout" element={<Checkout />} />
               </Route>
             </Routes>
           </BrowserRouter>
