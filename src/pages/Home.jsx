@@ -33,7 +33,7 @@ export const Home = () => {
       </div>
 
       <div className="container">
-        <div data-aos="fade-right" className="product_card_section">
+        <div className="product_card_section">
           <div className="section_title">
             <h2 className="title">This week’s highlights</h2>
           </div>
@@ -52,10 +52,10 @@ export const Home = () => {
       {/* Elementor section */}
       <div className="container">
         <div className="elementor_section">
-          <div data-aos="zoom-in-up" className="elementor_left_column">
+          <div className="elementor_left_column">
             <img className="elementor_left_img" src={elementor_img} alt="" />
           </div>
-          <div data-aos="fade-left" className="elementor_right_column">
+          <div className="elementor_right_column">
             <h2 className="elementor_heading_title">
               Poplin Top With Ruffle Trim
             </h2>
@@ -89,7 +89,7 @@ export const Home = () => {
         <div className="container">
           <div className="row">
             <div className="left_column"></div>
-            <div data-aos="fade-down-left" className="right_column">
+            <div className="right_column">
               <TimerCoundown />
             </div>
           </div>

@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
 import { useQuery } from "react-query";
 import { allProducts } from "../api/api";
+import AppLayout from "../Components/AppLayout/AppLayout";
 
 export const SelectOption = () => {
   /* This is a react hook. It is a function that lets you hook into react features. */
