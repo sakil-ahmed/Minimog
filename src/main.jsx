@@ -31,22 +31,28 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home/>,
+                index: true,
+                errorElement: <PageNotFound/>
             },
             {
                 path: '/shop',
                 element: <Shop/>,
+                errorElement: <PageNotFound/>
             },
             {
                 path: '/products',
                 element: <Products/>,
+                errorElement: <PageNotFound/>
             },
             {
                 path: '/blog',
                 element: <Blogs/>,
+                errorElement: <PageNotFound/>
             },
             {
                 path: '/wishlist',
                 element: <WishList/>,
+                errorElement: <PageNotFound/>
             },
             {
                 path: '/checkout',
