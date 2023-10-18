@@ -13,25 +13,31 @@ const Styled404 = styled.div`
   flex-direction: column;
   padding: 128px 0;
   background-color: #f5f1ed;
+  min-height: 100vh;
+
   ${media.up("md")} {
     padding: 192px 0;
   }
+
   .icon {
     width: 64px;
     height: 64px;
-    margin: 0 auto;
-    margin-bottom: 16px;
+    margin: 0 auto 16px auto;
+
   }
+
   h1 {
     font-weight: 500;
     text-align: center;
     font-size: 1.875rem;
     line-height: 2.25rem;
+
     ${media.up("md")} {
       line-height: 1.25;
       font-size: 3.75rem;
     }
   }
+
   p {
     text-align: center;
     line-height: 1.25;
@@ -39,13 +45,16 @@ const Styled404 = styled.div`
     color: #000000;
     margin-bottom: 32px;
     font-size: 1.875rem;
+
     ${media.up("md")} {
       font-size: 3.75rem;
     }
   }
+
   .btn_container {
     text-align: center;
   }
+
   .home_btn {
     padding: 10px 33px;
     min-height: 45px;
@@ -59,9 +68,11 @@ const Styled404 = styled.div`
     transition: all 0.3s ease-in-out;
     width: fit-content;
     display: inline-block;
+
     ${media.up("md")} {
       width: fit-content;
     }
+
     &:hover {
       box-shadow: 0 0 0 0.2rem ${THEME.colors.primary};
     }
